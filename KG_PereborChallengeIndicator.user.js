@@ -122,7 +122,14 @@
             let userBestSpeed = user.best_speed;
 
             let playerElementId = '#player' + player.id;
+            console.debug('playerElementId', playerElementId);
             let playerElement = document.querySelector(playerElementId);
+
+            if(!playerElement) {
+                console.debug('cannot find car element for user ' + userId + ', skipping the user');
+                continue;
+            }
+
             console.debug('playerElement', playerElement);
             let carRatingElement = playerElement.querySelector(".car_rating");
 
