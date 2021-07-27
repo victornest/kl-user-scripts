@@ -57,6 +57,11 @@
         for (let player of info.players) {
             console.debug('player', player);
             let user = player.user;
+            
+            if(!user) {
+                continue;
+            }
+            
             let userId = user.id;
             let userBestSpeed = user.best_speed;
             let user95Speed = Math.ceil(userBestSpeed*0.95);
