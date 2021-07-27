@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_PereborChallengeIndicator
-// @version        0.0.2
+// @version        0.0.3
 // @namespace      klavogonki
 // @author         vnest
 // @description    Индикатор выполненной за сутки нормы 90/95% от рекорда (или поставленного рекорда) у игроков во время заезда
@@ -10,6 +10,14 @@
 
 (async function() {
     'use strict';
+
+    // fill with needed colors and coefficient
+    // must be in decreasing order - once matched subsequent won't be checked
+    const targetSpeeds = {
+        "red" : 1,
+        "green" : 0.95,
+        "blue" : 0.90
+    };
 
     let today = (new Date()).toISOString().slice(0, 10);
 
@@ -76,9 +84,6 @@
 
         let userBestSpeed = userStats.info.best_speed;
 
-        let user95Speed = Math.ceil(userBestSpeed*0.95);
-        let user90Speed = Math.ceil(userBestSpeed*0.90);
-
         let userDayStats = await httpGet(location.protocol + '//klavogonki.ru/api/profile/get-stats-details-data?userId=' + userId + '&gametype=' + gameType + '&fromDate=' + today + '&toDate=' + today + '&grouping=day');
 
         console.debug('user ' + userId + ' day stats', userDayStats);
@@ -90,21 +95,16 @@
         let userStatsToday = userDayStats.list[0];
         let userMaxSpeedToday = userStatsToday.max_speed;
 
-        let userBestSpeedAchieved = userMaxSpeedToday >= userBestSpeed;
-        let user95SpeedAchieved = userMaxSpeedToday >= user95Speed;
-        let user90SpeedAchieved = userMaxSpeedToday >= user90Speed;
-
-        if(!userBestSpeedAchieved && !user95SpeedAchieved && !user90SpeedAchieved) {
-            return;
-        }
-
-        let color = userBestSpeedAchieved ? "red" :
-        user95SpeedAchieved ? "green" :
-        user90SpeedAchieved ? "blue" : undefined;
-
-        let pereborIndicator = '<span class="perebor" style="color: ' + color + ';"> * <span>';
-
-        carRatingElement.insert(pereborIndicator);
+        for (let keyColor of Object.keys(targetSpeeds)){
+            let userTargetSpeed = Math.ceil(userBestSpeed*targetSpeeds[keyColor]);
+            console.debug('target speed for ' + keyColor, userTargetSpeed);
+            let userSpeedAchieved = userMaxSpeedToday >= userTargetSpeed;
+            if(userSpeedAchieved) {
+                let pereborIndicator = '<span class="perebor" style="color: ' + keyColor + ';"> * <span>';
+                carRatingElement.insert(pereborIndicator);
+                break; // stop checking subsequent targets
+            }
+        };
     }
 
 
