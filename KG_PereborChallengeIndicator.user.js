@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_PereborChallengeIndicator
-// @version        0.1.0
+// @version        0.1.1
 // @namespace      klavogonki
 // @author         vnest
 // @description    Индикатор выполненной за сутки нормы 90/95% от рекорда (или поставленного рекорда) у игроков во время заезда
@@ -28,7 +28,10 @@
 
     ///////////////////////////////////////////////////////////////////////////////
 
-    let today = (new Date()).toISOString().slice(0, 10);
+    // let today = (new Date()).toISOString().slice(0, 10);
+    // hack - fr-CA gives ISO format yyyy-MM-dd
+    let today = (new Date()).toLocaleString('fr-CA', { timeZone: 'Europe/Moscow' }).slice(0, 10);
+    console.debug('today date', today);
 
     let searchParams = new URLSearchParams(window.location.search);
     if(!searchParams.has("gmid")) {
