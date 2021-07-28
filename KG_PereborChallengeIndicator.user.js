@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_PereborChallengeIndicator
-// @version        0.0.4
+// @version        0.1.0
 // @namespace      klavogonki
 // @author         vnest
 // @description    Индикатор выполненной за сутки нормы 90/95% от рекорда (или поставленного рекорда) у игроков во время заезда
@@ -11,6 +11,10 @@
 (async function() {
     'use strict';
 
+    ///////////////////////////////////////////////////////////////////////////////
+    // SETTINGS
+    ///////////////////////////////////////////////////////////////////////////////
+
     // fill with needed colors and coefficient
     // must be in decreasing order - once matched subsequent won't be checked
     const targetSpeeds = {
@@ -18,6 +22,11 @@
         "green" : 0.95,
         "blue" : 0.90
     };
+
+    // detailed stats can be loaded for users with premium subscription
+    const enableDetailedStats = true;
+
+    ///////////////////////////////////////////////////////////////////////////////
 
     let today = (new Date()).toISOString().slice(0, 10);
 
@@ -75,16 +84,58 @@
         await processUserStat(userId, userBestSpeed, ratingElement);
     }
 
-    async function processUserStat(userId, bestSpeed, carRatingElement){
-        let userStats = await httpGet(location.protocol + '//klavogonki.ru/api/profile/get-stats-details?userId=' + userId + '&gametype=' + gameType);
-        if(!userStats.info) {
+    async function processUserStat(userId, userBestSpeed, carRatingElement){
+
+        if(enableDetailedStats) {
+            let userDayDetailedStats = await httpGet(location.protocol + '//klavogonki.ru/api/profile/get-stats-details-data?userId=' + userId + '&gametype=' + gameType + '&fromDate=' + today + '&toDate=' + today + '&grouping=none');
+
+            if(!userDayDetailedStats.list) {
+                console.debug('detailed statistics is not enabled for user ' + userId + '. Proceeding with regular statistics');
+                await processRegularUserStat(userId, userBestSpeed, carRatingElement);
+            } else {
+
+                let indicatorExists = carRatingElement.querySelectorAll('.perebor').length > 0;
+                if(indicatorExists) {
+                    console.debug('Indicator for user ' + userId + ' already exists');
+                    return;
+                }
+                let dayResults = {};
+                for(let listItem of userDayDetailedStats.list) {
+                    for (let keyColor of Object.keys(targetSpeeds)){
+                        let userTargetSpeed = Math.ceil(userBestSpeed*targetSpeeds[keyColor]);
+                        
+                        let userSpeedAchieved = listItem.speed >= userTargetSpeed;
+
+                        if(userSpeedAchieved) {
+                            if(!dayResults[keyColor]) {
+                                dayResults[keyColor] = 0;
+                            }
+                            dayResults[keyColor]++;
+                        }
+                    };
+                }
+
+                for (let keyColor of Object.keys(dayResults)) {
+                    if(!dayResults[keyColor]) {
+                        continue;
+                    }
+                    let pereborIndicator = '<span class="perebor" style="color: ' + keyColor + ';"> *(' + dayResults[keyColor]+ ') <span>';
+                    carRatingElement.insert(pereborIndicator);
+                }
+            }
+
+        } else {
+            await processRegularUserStat(userId, userBestSpeed, carRatingElement);
+        }
+    }
+
+    async function processRegularUserStat(userId, userBestSpeed, carRatingElement) {
+        let userDayStats = await httpGet(location.protocol + '//klavogonki.ru/api/profile/get-stats-details-data?userId=' + userId + '&gametype=' + gameType + '&fromDate=' + today + '&toDate=' + today + '&grouping=day');
+
+        if(!userDayStats.list) {
             console.debug('statistics is closed for user ' + userId);
             return;
         }
-
-        let userBestSpeed = userStats.info.best_speed;
-
-        let userDayStats = await httpGet(location.protocol + '//klavogonki.ru/api/profile/get-stats-details-data?userId=' + userId + '&gametype=' + gameType + '&fromDate=' + today + '&toDate=' + today + '&grouping=day');
 
         console.debug('user ' + userId + ' day stats', userDayStats);
 
@@ -112,7 +163,6 @@
             }
         };
     }
-
 
     async function initIndicators() {
 
