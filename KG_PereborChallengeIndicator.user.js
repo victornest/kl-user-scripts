@@ -143,13 +143,13 @@
         }
     }
 
-    var config = { childList: true };
-
+    var playersObserverConfig = { childList: true };
     let playersElement = document.querySelector('#players'); 
 
-    let racingElement = document.querySelector('#racing');
+    let statusObserverConfig = { attributes: true };
+    let statusElement = document.querySelector('#status');
 
-    const callback = async function(mutationsList, observer) {
+    const playersCallback = async function(mutationsList, observer) {
         for(let mutation of mutationsList) {
             console.debug('mutation', mutation);
 
@@ -158,16 +158,16 @@
                 let recordElement = addedNode.querySelector('.newrecord');
                 console.debug('recordElement', recordElement);
 
-                let newRacingSpanElement = recordElement.querySelector('span');
+                let newPlayerSpanElement = recordElement.querySelector('span');
 
                 // guest player
-                if(!newRacingSpanElement) {
+                if(!newPlayerSpanElement) {
                     continue;
                 }
 
-                console.debug('newRacingSpanElement', newRacingSpanElement);
+                console.debug('newPlayerSpanElement', newPlayerSpanElement);
 
-                let attrWithUserId = newRacingSpanElement.getAttribute('ng:show');
+                let attrWithUserId = newPlayerSpanElement.getAttribute('ng:show');
                 console.debug('attrWithUserId', attrWithUserId);
                 let userId = attrWithUserId.substring(attrWithUserId.indexOf('[') + 1, attrWithUserId.indexOf(']'));
                 console.debug('userId', userId);
@@ -177,10 +177,26 @@
                 await loadAndProcessUserStat(userId, carRatingElement);
             }
         }
-    }
+    };
 
-    let observer = new MutationObserver(callback);
-    observer.observe(playersElement, config);
+    let playersObserver = new MutationObserver(playersCallback);
+    playersObserver.observe(playersElement, playersObserverConfig);
+
+    const statusCallback = async function(mutationsList, observer) {
+        if(mutationsList.length === 0) {
+            return;
+        }
+        let raceStatus = mutationsList[0].target.className;
+
+        // stop watching DOM once the race has been started, so no new players can join
+        if(raceStatus === 'go') {
+            playersObserver.disconnect();
+            observer.disconnect();
+        }
+    };
+
+    let statusObserver = new MutationObserver(statusCallback);
+    statusObserver.observe(statusElement, statusObserverConfig);
 
     await initIndicators();
 })();
