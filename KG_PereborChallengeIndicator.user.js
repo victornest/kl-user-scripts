@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_PereborChallengeIndicator
-// @version        0.0.3
+// @version        0.0.4
 // @namespace      klavogonki
 // @author         vnest
 // @description    Индикатор выполненной за сутки нормы 90/95% от рекорда (или поставленного рекорда) у игроков во время заезда
@@ -99,7 +99,13 @@
             let userTargetSpeed = Math.ceil(userBestSpeed*targetSpeeds[keyColor]);
             console.debug('target speed for ' + keyColor, userTargetSpeed);
             let userSpeedAchieved = userMaxSpeedToday >= userTargetSpeed;
+
             if(userSpeedAchieved) {
+                let indicatorExists = carRatingElement.querySelectorAll('.perebor').length > 0;
+                if(indicatorExists) {
+                    console.debug('Indicator for user ' + userId + ' already exists');
+                    break;
+                }
                 let pereborIndicator = '<span class="perebor" style="color: ' + keyColor + ';"> * <span>';
                 carRatingElement.insert(pereborIndicator);
                 break; // stop checking subsequent targets
