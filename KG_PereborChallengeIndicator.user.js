@@ -236,11 +236,33 @@
             logDebug('userGameBasicStats', userGameBasicStats);
             return;
         }
+        if (!userGameBasicStats.best_speed_post.message) {
+            logWarning('no best_speed_post.message data for user id', userId);
+            logDebug('userGameBasicStats', userGameBasicStats);
+            return;
+        }
+        if (!userGameBasicStats.best_speed_post.message.info) {
+            logWarning('no best_speed_post.message.info data for user id', userId);
+            logDebug('userGameBasicStats', userGameBasicStats);
+            return;
+        }
         let userbestSpeedDateString = userGameBasicStats.best_speed_post.message.info.updated;
         let userBestSpeedDate = new Date(userbestSpeedDateString);
 
+        if (!userTodayStats.list) {
+            logDebug('statistics is closed for user ' + userId);
+            return;
+        }
+
+        if (userTodayStats.list.length === 0) {
+            logDebug('no races for today for user ' + userId);
+            return;
+        }
+
         let userStatsToday = userTodayStats.list[0];
         let userMaxSpeedToday = userStatsToday.max_speed;
+
+
 
         for (let keyColor of Object.keys(targetSpeeds)) {
             let targetSpeedItem = targetSpeeds[keyColor];
@@ -284,6 +306,7 @@
             }
 
             if (stats.list.length === 0) {
+                logDebug('no races for ' + dateISOShort + ' for user ' + userId);
                 break;
             }
 
