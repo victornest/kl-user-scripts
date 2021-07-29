@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_PereborChallengeIndicator
-// @version        0.1.1
+// @version        0.2.0
 // @namespace      klavogonki
 // @author         vnest
 // @description    Индикатор выполненной за сутки нормы 90/95% от рекорда (или поставленного рекорда) у игроков во время заезда
@@ -22,6 +22,22 @@
         "green" : 0.95,
         "blue" : 0.90
     };
+
+    // Оставьте пустым, если хотите чтобы скрипт работал во всех режимах
+    // Пропишите режимы, если хотите ограничить работу скрипта только для них
+    //
+    // Обычный - "normal"
+    // Безошибочный - "noerror"
+    // Буквы - "chars"
+    // Марафон - "marathon"
+    // Спринт - "sprint"
+    // Абракадабра - "abra"
+    // Цифры - "digits"
+    // Яндекс.Рефераты - "referats"
+    // По словарю - "voc-XXXX", где XXXX - номер словаря (виден в адресной строке), например Соточка - "voc-25856"
+    //
+    // Пример для обычного и обычного in English - const gameTypes = ["normal", "voc-5539"];
+    const gameTypes = [];
 
     // detailed stats can be loaded for users with premium subscription
     const enableDetailedStats = true;
@@ -52,6 +68,11 @@
     }
 
     if(!gameType) {
+        return;
+    }
+
+    if(gameTypes.length && !gameTypes.includes(gameType)) {
+        console.debug('Stop executing for game type ' + gameType);
         return;
     }
 
