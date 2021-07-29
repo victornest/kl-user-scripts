@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_PereborChallengeIndicator
-// @version        0.2.0
+// @version        0.2.1
 // @namespace      klavogonki
 // @author         vnest
 // @description    Индикатор выполненной за сутки нормы 90/95% от рекорда (или поставленного рекорда) у игроков во время заезда
@@ -143,7 +143,7 @@
                     if(!dayResults[keyColor]) {
                         continue;
                     }
-                    let pereborIndicator = '<span class="perebor" style="color: ' + keyColor + ';"> *(' + dayResults[keyColor]+ ') <span>';
+                    let pereborIndicator = '<span class="perebor" style="color: ' + keyColor + ';"> ' + dayResults[keyColor]+ '* <span>';
                     carRatingElement.insert(pereborIndicator);
                 }
             }
