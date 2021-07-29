@@ -18,10 +18,33 @@
     // Поменяйте на нужные вам цвета (могут быть в формате HEX например "#FF0000")
     // и коэффициенты, можно, например, оставить только 0.95, или, наоборот добавить 0.85
     // Нужно обязательно указать в убывающем порядке, иначе скрипт будет работать некорректно
+    // Дополнительно тут указываются heroChar символы, которые будут отображаться за достижение заданных скоростей определнное количество дней подряд
     const targetSpeeds = {
-        "red": 1,
-        "green": 0.95,
-        "blue": 0.90
+        "red": {
+            "coeff": 1,
+            "heroChar": " ! "
+        },
+        "green": {
+            "coeff": 0.95,
+            "heroChar": "@"
+        },
+        "blue": {
+            "coeff": 0.90,
+            "heroChar": "#"
+        }
+    };
+
+    // Настройка включает дополнительный индикатор за достижение заданных скоростей определнное количество дней подряд
+    const enableStraightDaysIndicator = true;
+    // Поменяйте на нужные вам цвета и количество дней подряд, в течение которых будет отслеживаться достижений заданных скоростей
+    const straightDaysColors = {
+        "red": 30,
+        "purple": 25,
+        "orange": 20,
+        "green": 15,
+        "yellow": 10,
+        "blue": 5,
+        "white": 1
     };
 
     // Оставьте пустым, если хотите чтобы скрипт работал во всех режимах
@@ -86,24 +109,26 @@
     }
 
     async function loadAndProcessUserStat(userId, ratingElement) {
-        let userStats = await httpGet(location.protocol + '//klavogonki.ru/api/profile/get-stats-details?userId=' + userId + '&gametype=' + gameType);
-        if (!userStats.info) {
+        await processUserStat(userId, ratingElement);
+    }
+
+    async function processUserStat(userId, carRatingElement) {
+
+        let userGameBasicStats = await httpGet(location.protocol + '//klavogonki.ru/api/profile/get-stats-details?userId=' + userId + '&gametype=' + gameType);
+        if (!userGameBasicStats.info) {
             console.debug('statistics is closed for user ' + userId);
             return;
         }
-        let userBestSpeed = userStats.info.best_speed;
+        let userBestSpeed = userGameBasicStats.info.best_speed;
 
-        await processUserStat(userId, userBestSpeed, ratingElement);
-    }
-
-    async function processUserStat(userId, userBestSpeed, carRatingElement) {
+        let userDayStats = await httpGet(location.protocol + '//klavogonki.ru/api/profile/get-stats-details-data?userId=' + userId + '&gametype=' + gameType + '&fromDate=' + today + '&toDate=' + today + '&grouping=day');
 
         if (enableDetailedStats) {
             let userDayDetailedStats = await httpGet(location.protocol + '//klavogonki.ru/api/profile/get-stats-details-data?userId=' + userId + '&gametype=' + gameType + '&fromDate=' + today + '&toDate=' + today + '&grouping=none');
 
             if (!userDayDetailedStats.list) {
                 console.debug('detailed statistics is not enabled for user ' + userId + '. Proceeding with regular statistics');
-                await processRegularUserStat(userId, userBestSpeed, carRatingElement);
+                await processRegularUserStat(userId, userBestSpeed, carRatingElement, userDayStats);
             } else {
 
                 let indicatorExists = carRatingElement.querySelectorAll('.perebor').length > 0;
@@ -114,7 +139,8 @@
                 let dayResults = {};
                 for (let listItem of userDayDetailedStats.list) {
                     for (let keyColor of Object.keys(targetSpeeds)) {
-                        let userTargetSpeed = Math.ceil(userBestSpeed * targetSpeeds[keyColor]);
+                        let targetSpeedItem = targetSpeeds[keyColor];
+                        let userTargetSpeed = Math.ceil(userBestSpeed * targetSpeedItem.coeff);
 
                         let userSpeedAchieved = listItem.speed >= userTargetSpeed;
 
@@ -137,12 +163,15 @@
             }
 
         } else {
-            await processRegularUserStat(userId, userBestSpeed, carRatingElement);
+            await processRegularUserStat(userId, userBestSpeed, carRatingElement, userDayStats);
+        }
+
+        if(enableStraightDaysIndicator) {
+            await processStraghtDaysAchievements(userId, carRatingElement, userGameBasicStats, userDayStats);
         }
     }
 
-    async function processRegularUserStat(userId, userBestSpeed, carRatingElement) {
-        let userDayStats = await httpGet(location.protocol + '//klavogonki.ru/api/profile/get-stats-details-data?userId=' + userId + '&gametype=' + gameType + '&fromDate=' + today + '&toDate=' + today + '&grouping=day');
+    async function processRegularUserStat(userId, userBestSpeed, carRatingElement, userDayStats) {
 
         if (!userDayStats.list) {
             console.debug('statistics is closed for user ' + userId);
@@ -157,7 +186,8 @@
         let userMaxSpeedToday = userStatsToday.max_speed;
 
         for (let keyColor of Object.keys(targetSpeeds)) {
-            let userTargetSpeed = Math.ceil(userBestSpeed * targetSpeeds[keyColor]);
+            let targetSpeedItem = targetSpeeds[keyColor];
+            let userTargetSpeed = Math.ceil(userBestSpeed * targetSpeedItem.coeff);
             let userSpeedAchieved = userMaxSpeedToday >= userTargetSpeed;
 
             if (userSpeedAchieved) {
@@ -173,6 +203,126 @@
         };
     }
 
+    async function processStraghtDaysAchievements(userId, carRatingElement, userGameBasicStats, userTodayStats) {
+        let straightDaysColorsKeys = Object.keys(straightDaysColors);
+        let maxLookupDays = straightDaysColors[straightDaysColorsKeys[0]];
+        let date = new Date(today);
+
+        let straightDayResults = {};
+
+        let userBestSpeed = userGameBasicStats.info.best_speed;
+        if(!userGameBasicStats.best_speed_post) {
+            console.error('no best_speed_post data for user id', userId);
+            console.debug('userGameBasicStats', userGameBasicStats);
+            return;
+        }
+        let userbestSpeedDateString = userGameBasicStats.best_speed_post.message.info.updated;
+        let userBestSpeedDate = new Date(userbestSpeedDateString);
+        console.debug("userBestSpeedDate", userBestSpeedDate);
+
+        let userStatsToday = userTodayStats.list[0];
+        let userMaxSpeedToday = userStatsToday.max_speed;
+        console.debug("userMaxSpeedToday", userMaxSpeedToday);
+
+        for (let keyColor of Object.keys(targetSpeeds)) {
+            let targetSpeedItem = targetSpeeds[keyColor];
+            let userTargetSpeed = Math.ceil(userBestSpeed * targetSpeedItem.coeff);
+
+            let userTargetSpeedAchieved = userMaxSpeedToday >= userTargetSpeed;
+
+            if (userTargetSpeedAchieved) {
+
+                straightDayResults[keyColor] = 1;
+                break;
+            }
+        }
+
+        let straightDayResultsKeys = Object.keys(straightDayResults);
+        if(!straightDayResultsKeys.length) {
+            return;
+        }
+
+        if(straightDayResultsKeys.length != 1) {
+            console.error('Invalid straightDayResultsKeys result', straightDayResultsKeys);
+             // TODO: add debug info
+            return;
+        }
+
+        let straightDaysKeyColor = straightDayResultsKeys[0];
+
+        let userBestSpeedHistory = userGameBasicStats.journal;
+        let targetSpeedItem = targetSpeeds[straightDaysKeyColor];
+
+        for (let i = 0; i<maxLookupDays; i++) {
+            date.setDate(date.getDate() - 1);
+            let dateISO = date.toISOString();
+            let dateISOShort = dateISO.slice(0, 10);
+
+            console.debug("dateISOShort " + i, dateISOShort);
+
+            let stats = await httpGet(location.protocol + '//klavogonki.ru/api/profile/get-stats-details-data?userId=' + userId + '&gametype=' + gameType + '&fromDate=' + dateISOShort + '&toDate=' + dateISOShort + '&grouping=day');
+
+            if (!stats.list) {
+                console.debug('statistics is closed for user ' + userId);
+                return;
+            }
+    
+            if (stats.list.length === 0) {
+                break;
+            }
+
+            let userStatsDate = stats.list[0];
+
+            let userBestSpeedDateAdjusted = userBestSpeed;
+            if(date<userBestSpeedDate) {
+
+                let userBestSpeedDateLookup = userBestSpeedHistory.find(historyItem => {
+
+                    if(historyItem.message.type !== "record") {
+                        return false;
+                    }
+
+                    let userBestHistoricalSpeedDateString = historyItem.message.info.updated;
+                    let userBestHistoricalSpeedDate = new Date(userBestHistoricalSpeedDateString);
+
+                    return userBestHistoricalSpeedDate <= date;
+                });
+
+                
+                if(userBestSpeedDateLookup) {
+                    userBestSpeedDateAdjusted = userBestSpeedDateLookup.message.info.best_speed;
+                }
+            }
+            let userTargetSpeed = Math.ceil(userBestSpeedDateAdjusted * targetSpeedItem.coeff);
+
+            let userSpeedAchieved = userStatsDate.max_speed >= userTargetSpeed;
+            if(!userSpeedAchieved){
+                break;
+            }
+
+            straightDayResults[straightDaysKeyColor]++;
+        }
+
+        let straightDaysAchieved = straightDayResults[straightDaysKeyColor];
+
+        for (let straightDaysColorsKey of straightDaysColorsKeys)
+        {
+            let straightDaysNeeded = straightDaysColors[straightDaysColorsKey];
+            if(straightDaysAchieved >= straightDaysNeeded) {
+                
+                let indicatorExists = carRatingElement.querySelectorAll('.perebor-days').length > 0;
+                if (indicatorExists) {
+                    console.debug('IndicatorDays for user ' + userId + ' already exists');
+                    break;
+                }
+                let pereborIndicator = '<span class="perebor-days" style="background-color:black; color: ' + straightDaysColorsKey + ';">'+ targetSpeedItem.heroChar +'<span>';
+                carRatingElement.insert(pereborIndicator);
+
+                break;
+            }
+        }
+    }
+
     async function initIndicators() {
 
         for (let player of info.players) {
@@ -183,7 +333,6 @@
             }
 
             let userId = user.id;
-            let userBestSpeed = user.best_speed;
 
             let playerElementId = '#player' + player.id;
 
@@ -198,7 +347,7 @@
 
             let carRatingElement = playerElement.querySelector(".car_rating");
 
-            await processUserStat(userId, userBestSpeed, carRatingElement);
+            await processUserStat(userId, carRatingElement);
         }
     }
 
