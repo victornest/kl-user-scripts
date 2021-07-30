@@ -22,7 +22,7 @@
     const targetSpeeds = {
         "red": {
             "coeff": 1,
-            "heroChar": " ! "
+            "heroChar": "✪"
         },
         "green": {
             "coeff": 0.95,
@@ -38,13 +38,13 @@
     const enableStraightDaysIndicator = true;
     // Поменяйте на нужные вам цвета и количество дней подряд, в течение которых будет отслеживаться достижений заданных скоростей
     const straightDaysColors = {
-        "red": 30,
-        "purple": 25,
-        "orange": 20,
-        "green": 15,
-        "yellow": 10,
-        "blue": 5,
-        "white": 1
+        "#fb031a": 30,
+        "#fb03f2": 20,
+        "#fba103": 13,
+        "#14fb03": 8,
+        "#fbf803": 5,
+        "#06cdf8": 3,
+        "white": 2
     };
 
     // Оставьте пустым, если хотите чтобы скрипт работал во всех режимах
@@ -240,6 +240,7 @@
 
         let userBestSpeed = userGameBasicStats.info.best_speed;
         if (!userGameBasicStats.best_speed_post) {
+            // TODO: find first date with userBestSpeed within date range up to maxLookupDays
             logWarning('no best_speed_post data for user id', userId);
             logDebug('userGameBasicStats', userGameBasicStats);
             return;
