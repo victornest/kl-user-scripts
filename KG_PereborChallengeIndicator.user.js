@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_PereborChallengeIndicator
-// @version        1.0.2
+// @version        1.0.3
 // @namespace      klavogonki
 // @author         vnest
 // @description    Индикатор выполненной за сутки нормы 90/95% от рекорда (или поставленного рекорда) у игроков во время заезда
@@ -188,7 +188,14 @@
         }
 
         if (enableStraightDaysIndicator) {
-            await processStraghtDaysAchievements(userId, carRatingElement, userGameBasicStats, userDayStats);
+            try {
+                await processStraghtDaysAchievements(userId, carRatingElement, userGameBasicStats, userDayStats);
+            } catch (error) {
+                logError('Error on processing straghtDaysAchievements for user ' + userId, error);
+                logDebug('carRatingElement', carRatingElement);
+                logDebug('userGameBasicStats', userGameBasicStats);
+                logDebug('userDayStats', userDayStats);
+            }
         }
     }
 
@@ -314,23 +321,25 @@
             let userStatsDate = stats.list[0];
 
             let userBestSpeedDateAdjusted = userBestSpeed;
-            if (date < userBestSpeedDate) {
+            if (userBestSpeedHistory) {
+                if (date < userBestSpeedDate) {
 
-                let userBestSpeedDateLookup = userBestSpeedHistory.find(historyItem => {
+                    let userBestSpeedDateLookup = userBestSpeedHistory.find(historyItem => {
 
-                    if (historyItem.message.type !== "record") {
-                        return false;
+                        if (historyItem.message.type !== "record") {
+                            return false;
+                        }
+
+                        let userBestHistoricalSpeedDateString = historyItem.message.info.updated;
+                        let userBestHistoricalSpeedDate = new Date(userBestHistoricalSpeedDateString);
+
+                        return userBestHistoricalSpeedDate <= date;
+                    });
+
+
+                    if (userBestSpeedDateLookup) {
+                        userBestSpeedDateAdjusted = userBestSpeedDateLookup.message.info.best_speed;
                     }
-
-                    let userBestHistoricalSpeedDateString = historyItem.message.info.updated;
-                    let userBestHistoricalSpeedDate = new Date(userBestHistoricalSpeedDateString);
-
-                    return userBestHistoricalSpeedDate <= date;
-                });
-
-
-                if (userBestSpeedDateLookup) {
-                    userBestSpeedDateAdjusted = userBestSpeedDateLookup.message.info.best_speed;
                 }
             }
             let userTargetSpeed = Math.ceil(userBestSpeedDateAdjusted * targetSpeedItem.coeff);
@@ -365,29 +374,37 @@
     async function initIndicators() {
 
         for (let player of info.players) {
-            let user = player.user;
+            try {
+                let user = player.user;
 
-            if (!user) {
+                if (!user) {
+                    continue;
+                }
+
+                let userId = user.id;
+
+                let playerElementId = '#player' + player.id;
+
+                let playerElement = document.querySelector(playerElementId);
+
+                if (!playerElement) {
+                    logError('cannot find car element for user ' + userId + ', skipping the user');
+                    logDebug('playerElementId', playerElementId);
+                    logDebug('player', player);
+                    continue;
+                }
+
+                let carRatingElement = playerElement.querySelector(".car_rating");
+
+                await processUserStat(userId, carRatingElement);
+            }
+            catch (error) {
+                logError('Error on initial processing a player', error);
+                logDebug('Player', player);
                 continue;
             }
-
-            let userId = user.id;
-
-            let playerElementId = '#player' + player.id;
-
-            let playerElement = document.querySelector(playerElementId);
-
-            if (!playerElement) {
-                logError('cannot find car element for user ' + userId + ', skipping the user');
-                logDebug('playerElementId', playerElementId);
-                logDebug('player', player);
-                continue;
-            }
-
-            let carRatingElement = playerElement.querySelector(".car_rating");
-
-            await processUserStat(userId, carRatingElement);
         }
+
     }
 
     var playersObserverConfig = { childList: true };
