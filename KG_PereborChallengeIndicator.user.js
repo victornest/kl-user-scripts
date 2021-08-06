@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_PereborChallengeIndicator
-// @version        1.0.4
+// @version        1.0.5
 // @namespace      klavogonki
 // @author         vnest
 // @description    Индикатор выполненной за сутки нормы 90/95% от рекорда (или поставленного рекорда) у игроков во время заезда
@@ -339,7 +339,7 @@
 
 
                     if (userBestSpeedDateLookup) {
-                        userBestSpeedDateAdjusted = userBestSpeedDateLookup.message.info.best_speed;
+                        userBestSpeedDateAdjusted = userBestSpeedDateLookup.message.speed;
                     }
                 }
             }
