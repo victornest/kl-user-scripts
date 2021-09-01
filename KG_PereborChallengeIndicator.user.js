@@ -138,13 +138,38 @@
         });
     }
 
-    async function processUserStat(userId, carRatingElement) {
+    async function processUserStat(userId, playerElement) {
+
+        let carRatingElement = playerElement.querySelector(".car_rating");
+
 
         let userGameBasicStats = await httpGet(location.protocol + '//klavogonki.ru/api/profile/get-stats-details?userId=' + userId + '&gametype=' + gameType);
         if (!userGameBasicStats.info) {
-            logDebug('statistics is closed for user ' + userId);
-            return;
+            if (userGameBasicStats.err === 'invalid gametype') {
+                logDebug('first race in this mode for user ' + userId);
+            } else {
+                logDebug('statistics is closed for user ' + userId);
+                let closedIndicator = '<span class="perebor-closed" style="color: black;"> ✖ <span>';
+                if (!carRatingElement) {
+                    let topAwardElement = playerElement.querySelector(".top-award");
+                    let carRatingHtml = '<div class="car_rating"></div>';
+                    topAwardElement.insert(carRatingHtml);
+                    carRatingElement = playerElement.querySelector(".car_rating");
+                }
+
+                let indicatorExists = carRatingElement.querySelectorAll('.perebor-closed').length > 0;
+                if (!indicatorExists) {
+                    carRatingElement.insert(closedIndicator);
+                }
+            }
+            return false;
         }
+
+        if (!carRatingElement) {
+            logDebug('no races recently in this mode for user ' + userId);
+            return true; // statistics is old, but exists and opened, can be new achievements
+        }
+
         let userBestSpeed = userGameBasicStats.info.best_speed;
         bestSpeedByUser[userId] = userBestSpeed;
 
@@ -161,7 +186,7 @@
                 let indicatorExists = carRatingElement.querySelectorAll('.perebor').length > 0;
                 if (indicatorExists) {
                     logWarning('Indicator for user ' + userId + ' already exists');
-                    return;
+                    return true;
                 }
                 let dayResults = {};
                 for (let listItem of userDayDetailedStats.list) {
@@ -204,6 +229,8 @@
                 logDebug('userDayStats', userDayStats);
             }
         }
+
+        return true;
     }
 
     async function processRegularUserStat(userId, userBestSpeed, carRatingElement, userDayStats) {
@@ -402,11 +429,10 @@
                     continue;
                 }
 
-                subscribeToPlayerFinish(playerElement, userId);
-
-                let carRatingElement = playerElement.querySelector(".car_rating");
-
-                await processUserStat(userId, carRatingElement);
+                let success = await processUserStat(userId, playerElement);
+                if (success) {
+                    subscribeToPlayerFinish(playerElement, userId);
+                }
             }
             catch (error) {
                 logError('Error on initial processing a player', error);
@@ -423,7 +449,7 @@
     let statusObserverConfig = { attributes: true };
     let statusElement = document.querySelector('#status');
 
-    
+
 
     function subscribeToPlayerFinish(playerElement, userId) {
         let ratingObserverConfig = { attributes: true };
@@ -440,7 +466,7 @@
             let userBestSpeed = bestSpeedByUser[userId];
             console.debug('user finished best speed', userBestSpeed);
 
-            if(userBestSpeed > resultSpeed) {
+            if (userBestSpeed > resultSpeed) {
                 for (let keyColor of Object.keys(targetSpeeds)) {
                     let targetSpeedItem = targetSpeeds[keyColor];
                     let userTargetSpeed = Math.ceil(userBestSpeed * targetSpeedItem.coeff);
@@ -465,7 +491,7 @@
         for (let mutation of mutationsList) {
 
             for (let addedNode of mutation.addedNodes) {
-                
+
                 let recordElement = addedNode.querySelector('.newrecord');
 
                 let newPlayerSpanElement = recordElement.querySelector('span');
@@ -487,11 +513,11 @@
                     logDebug('recordElement', recordElement);
                 }
 
-                subscribeToPlayerFinish(addedNode, userId);
+                let success = await processUserStat(userId, addedNode);
 
-                let carRatingElement = addedNode.querySelector('.car_rating');
-
-                await processUserStat(userId, carRatingElement);
+                if (success) {
+                    subscribeToPlayerFinish(addedNode, userId);
+                }
             }
         }
     };
