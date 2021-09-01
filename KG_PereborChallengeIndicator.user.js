@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_PereborChallengeIndicator
-// @version        1.0.5
+// @version        1.1.0
 // @namespace      klavogonki
 // @author         vnest
 // @description    Индикатор выполненной за сутки нормы 90/95% от рекорда (или поставленного рекорда) у игроков во время заезда
@@ -31,7 +31,15 @@
         "blue": {
             "coeff": 0.90,
             "heroChar": "#"
-        }
+        },
+        // "orange": {
+        //     "coeff": 0.75,
+        //     "heroChar": "#"
+        // },
+        // "yellow": {
+        //     "coeff": 0.50,
+        //     "heroChar": "#"
+        // }
     };
 
     // Настройка включает дополнительный индикатор за достижение заданных скоростей определнное количество дней подряд
@@ -71,6 +79,8 @@
     ///////////////////////////////////////////////////////////////////////////////
     // Конец настроек
     ///////////////////////////////////////////////////////////////////////////////
+
+    let bestSpeedByUser = {};
 
     function getLogMessage(message) {
         return "KG_PereborChallengeIndicator: " + message;
@@ -128,10 +138,6 @@
         });
     }
 
-    async function loadAndProcessUserStat(userId, ratingElement) {
-        await processUserStat(userId, ratingElement);
-    }
-
     async function processUserStat(userId, carRatingElement) {
 
         let userGameBasicStats = await httpGet(location.protocol + '//klavogonki.ru/api/profile/get-stats-details?userId=' + userId + '&gametype=' + gameType);
@@ -140,6 +146,7 @@
             return;
         }
         let userBestSpeed = userGameBasicStats.info.best_speed;
+        bestSpeedByUser[userId] = userBestSpeed;
 
         let userDayStats = await httpGet(location.protocol + '//klavogonki.ru/api/profile/get-stats-details-data?userId=' + userId + '&gametype=' + gameType + '&fromDate=' + today + '&toDate=' + today + '&grouping=day');
 
@@ -395,6 +402,8 @@
                     continue;
                 }
 
+                subscribeToPlayerFinish(playerElement, userId);
+
                 let carRatingElement = playerElement.querySelector(".car_rating");
 
                 await processUserStat(userId, carRatingElement);
@@ -414,11 +423,51 @@
     let statusObserverConfig = { attributes: true };
     let statusElement = document.querySelector('#status');
 
-    const playersCallback = async function (mutationsList, observer) {
+    
+
+    function subscribeToPlayerFinish(playerElement, userId) {
+        let ratingObserverConfig = { attributes: true };
+        let ratingElement = playerElement.querySelector('.rating');
+        let recordElement = playerElement.querySelector('.newrecord');
+
+        let playerRatingCallback = async function (mutationsList, _) {
+            if (mutationsList.length === 0) {
+                return;
+            }
+            let resultSpeed = mutationsList[0].target.querySelector('.stats').children[1].querySelector('.bitmore').innerText;
+            console.debug('finished result', resultSpeed);
+            console.debug('user finished', userId);
+            let userBestSpeed = bestSpeedByUser[userId];
+            console.debug('user finished best speed', userBestSpeed);
+
+            if(userBestSpeed > resultSpeed) {
+                for (let keyColor of Object.keys(targetSpeeds)) {
+                    let targetSpeedItem = targetSpeeds[keyColor];
+                    let userTargetSpeed = Math.ceil(userBestSpeed * targetSpeedItem.coeff);
+                    let userSpeedAchieved = resultSpeed >= userTargetSpeed;
+
+                    if (userSpeedAchieved) {
+                        console.debug('achieved ' + targetSpeedItem.coeff * 100 + '%!', userId);
+                        //TODO: add element
+                        let achievementIndicator = '<a class="perebor-achievement" style="color: ' + keyColor + '; border-bottom: 1px dashed ' + keyColor + ';">* ' + targetSpeedItem.coeff * 100 + '% от рекорда!' + '<a>';
+                        recordElement.insert(achievementIndicator);
+                        break;
+                    }
+                }
+            }
+        }
+
+        let ratingObserver = new MutationObserver(playerRatingCallback);
+        ratingObserver.observe(ratingElement, ratingObserverConfig);
+    }
+
+    const playersCallback = async function (mutationsList, _) {
         for (let mutation of mutationsList) {
 
             for (let addedNode of mutation.addedNodes) {
+                
                 let recordElement = addedNode.querySelector('.newrecord');
+
                 let newPlayerSpanElement = recordElement.querySelector('span');
 
                 // guest player
@@ -438,9 +487,11 @@
                     logDebug('recordElement', recordElement);
                 }
 
+                subscribeToPlayerFinish(addedNode, userId);
+
                 let carRatingElement = addedNode.querySelector('.car_rating');
 
-                await loadAndProcessUserStat(userId, carRatingElement);
+                await processUserStat(userId, carRatingElement);
             }
         }
     };
