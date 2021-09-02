@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_PereborChallengeIndicator
-// @version        1.1.1
+// @version        1.1.2
 // @namespace      klavogonki
 // @author         vnest
 // @description    Индикатор выполненной за сутки нормы 90/95% от рекорда (или поставленного рекорда) у игроков во время заезда
@@ -138,6 +138,38 @@
         });
     }
 
+    function httpPostForm(url, formData) {
+        return new Promise((resolve, reject) => {
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", url);
+            xhr.onload = () => resolve(xhr.responseText);
+            xhr.onerror = () => reject(logError(xhr.statusText));
+            xhr.send(formData);
+        });
+    }
+
+    async function getUserGameTypeMaxSpeedAsync(userId, gameType) {
+
+        var formData = new FormData();
+
+        formData.append("user_id", userId);
+        formData.append("gametype", gameType);
+
+        let url = location.protocol + '//klavogonki.ru/ajax/profile-popup';
+
+        let htmlResult = await httpPostForm(url, formData);
+
+        let speetTitle = '<th>Лучшая скорость:</th>';
+        let indexSpeedTitle = htmlResult.indexOf(speetTitle);
+        let indexSpeedUnit = htmlResult.indexOf(' зн/мин', indexSpeedTitle);
+        let speed = htmlResult.substring(indexSpeedTitle + speetTitle.length + 6, indexSpeedUnit);
+
+        console.debug('received best speed for player with closed statistics', speed);
+
+        return speed;
+
+    }
+
     async function processUserStat(userId, playerElement) {
 
         let carRatingElement = playerElement.querySelector(".car_rating");
@@ -147,6 +179,7 @@
         if (!userGameBasicStats.info) {
             if (userGameBasicStats.err === 'invalid gametype') {
                 logDebug('first race in this mode for user ' + userId);
+                return false; // no need to monitor achievements, it will be a record
             } else {
                 logDebug('statistics is closed for user ' + userId);
                 let closedIndicator = '<span class="perebor-closed" style="color: black;"> ✖ <span>';
@@ -161,8 +194,11 @@
                 if (!indicatorExists) {
                     carRatingElement.insert(closedIndicator);
                 }
+
+                let userBestSpeed = await getUserGameTypeMaxSpeedAsync(userId, gameType);
+                bestSpeedByUser[userId] = userBestSpeed;
+                return true; // statistics is closed, stop processing, but the best speed is known, can be new achievements
             }
-            return false;
         }
 
         let userBestSpeed = userGameBasicStats.info.best_speed;
@@ -170,6 +206,7 @@
 
         if (!carRatingElement) {
             logDebug('no races recently in this mode for user ' + userId);
+
             return true; // statistics is old, but exists and opened, can be new achievements
         }
 
