@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_PereborChallengeIndicator
-// @version        1.1.0
+// @version        1.1.1
 // @namespace      klavogonki
 // @author         vnest
 // @description    Индикатор выполненной за сутки нормы 90/95% от рекорда (или поставленного рекорда) у игроков во время заезда
@@ -165,13 +165,13 @@
             return false;
         }
 
+        let userBestSpeed = userGameBasicStats.info.best_speed;
+        bestSpeedByUser[userId] = userBestSpeed;
+
         if (!carRatingElement) {
             logDebug('no races recently in this mode for user ' + userId);
             return true; // statistics is old, but exists and opened, can be new achievements
         }
-
-        let userBestSpeed = userGameBasicStats.info.best_speed;
-        bestSpeedByUser[userId] = userBestSpeed;
 
         let userDayStats = await httpGet(location.protocol + '//klavogonki.ru/api/profile/get-stats-details-data?userId=' + userId + '&gametype=' + gameType + '&fromDate=' + today + '&toDate=' + today + '&grouping=day');
 
