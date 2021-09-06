@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_PereborChallengeIndicator
-// @version        1.1.2
+// @version        1.1.3
 // @namespace      klavogonki
 // @author         vnest
 // @description    Индикатор выполненной за сутки нормы 90/95% от рекорда (или поставленного рекорда) у игроков во время заезда
@@ -89,20 +89,36 @@
         return "KG_PereborChallengeIndicator: " + message;
     }
 
+    function logDebug(message) {
+        console.debug(getLogMessage(message));
+    }
+
     function logDebug(message, parameters) {
-        console.debug(getLogMessage(message), parameters)
+        console.debug(getLogMessage(message), parameters);
+    }
+
+    function logMessage(message) {
+        console.log(getLogMessage(message));
     }
 
     function logMessage(message, parameters) {
-        console.log(getLogMessage(message), parameters)
+        console.log(getLogMessage(message), parameters);
+    }
+
+    function logWarning(message) {
+        console.warn(getLogMessage(message));
     }
 
     function logWarning(message, parameters) {
-        console.warn(getLogMessage(message), parameters)
+        console.warn(getLogMessage(message), parameters);
+    }
+
+    function logError(message) {
+        console.error(getLogMessage(message));
     }
 
     function logError(message, parameters) {
-        console.error(getLogMessage(message), parameters)
+        console.error(getLogMessage(message), parameters);
     }
 
     function httpGet(url) {
@@ -141,7 +157,7 @@
         let indexSpeedUnit = htmlResult.indexOf(' зн/мин', indexSpeedTitle);
         let speed = htmlResult.substring(indexSpeedTitle + speetTitle.length + 6, indexSpeedUnit);
 
-        console.debug('received best speed for player with closed statistics', speed);
+        logDebug('received best speed for player with closed statistics', speed);
 
         return speed;
 
@@ -467,10 +483,10 @@
                 return;
             }
             let resultSpeed = mutationsList[0].target.querySelector('.stats').children[1].querySelector('.bitmore').innerText;
-            console.debug('finished result', resultSpeed);
-            console.debug('user finished', userId);
+            logDebug('finished result', resultSpeed);
+            logDebug('user finished', userId);
             let userBestSpeed = bestSpeedByUser[userId];
-            console.debug('user finished best speed', userBestSpeed);
+            logDebug('user finished best speed', userBestSpeed);
 
             if (userBestSpeed > resultSpeed) {
                 for (let keyColor of Object.keys(targetSpeeds)) {
@@ -479,7 +495,7 @@
                     let userSpeedAchieved = resultSpeed >= userTargetSpeed;
 
                     if (userSpeedAchieved) {
-                        console.debug('achieved ' + targetSpeedItem.coeff * 100 + '%!', userId);
+                        logDebug('achieved ' + targetSpeedItem.coeff * 100 + '%!', userId);
                         //TODO: add element
                         let achievementIndicator = '<a class="perebor-achievement" style="color: ' + keyColor + '; border-bottom: 1px dashed ' + keyColor + ';">* ' + targetSpeedItem.coeff * 100 + '% от рекорда!' + '<a>';
                         recordElement.insert(achievementIndicator);
@@ -583,8 +599,26 @@
 
     if (window.getComputedStyle(document.querySelector("#competition_alert")).display !== "none") {
         // competition_alert not yet confirmed
-        return;
-    }
+        const contentCallback = async function (mutationsList, observer) {
+            if (mutationsList.length === 0) {
+                return;
+            }
 
-    await init();
+            if (mutationsList[0].display != "none") {
+                logDebug('competition entered, initializing indicators');
+                observer.disconnect();
+                await init();
+            } else {
+                logDebug('competition not entered yet');
+            }
+        };
+
+        var contentObserverConfig = { attributes: true };
+        let contentElement = document.querySelector('#players-block');
+
+        let contentObserver = new MutationObserver(contentCallback);
+        contentObserver.observe(contentElement, contentObserverConfig);
+    } else {
+        await init();
+    }
 })();
