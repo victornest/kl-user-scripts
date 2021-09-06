@@ -81,6 +81,9 @@
     ///////////////////////////////////////////////////////////////////////////////
 
     let bestSpeedByUser = {};
+    let gameType;
+    // hack - fr-CA gives ISO format yyyy-MM-dd
+    let today = (new Date()).toLocaleString('fr-CA', { timeZone: 'Europe/Moscow' }).slice(0, 10);
 
     function getLogMessage(message) {
         return "KG_PereborChallengeIndicator: " + message;
@@ -101,32 +104,6 @@
     function logError(message, parameters) {
         console.error(getLogMessage(message), parameters)
     }
-
-    let searchParams = new URLSearchParams(window.location.search);
-    if (!searchParams.has("gmid")) {
-        return;
-    }
-
-    let gameId = searchParams.get('gmid');
-    let info = await httpGet(location.protocol + '//klavogonki.ru/g/' + gameId + '.info');
-    let gameType = info.params.gametype;
-
-    if (!gameType) {
-        gameType = info.params.gametype_clean;
-    }
-
-    if (!gameType) {
-        return;
-    }
-
-    if (gameTypes.length && !gameTypes.includes(gameType)) {
-        logDebug('Stop executing for game type ' + gameType);
-        return;
-    }
-
-    // let today = (new Date()).toISOString().slice(0, 10);
-    // hack - fr-CA gives ISO format yyyy-MM-dd
-    let today = (new Date()).toLocaleString('fr-CA', { timeZone: 'Europe/Moscow' }).slice(0, 10);
 
     function httpGet(url) {
         return new Promise((resolve, reject) => {
@@ -443,7 +420,7 @@
         }
     }
 
-    async function initIndicators() {
+    async function initIndicators(info) {
 
         for (let player of info.players) {
             try {
@@ -479,14 +456,6 @@
         }
 
     }
-
-    var playersObserverConfig = { childList: true };
-    let playersElement = document.querySelector('#players');
-
-    let statusObserverConfig = { attributes: true };
-    let statusElement = document.querySelector('#status');
-
-
 
     function subscribeToPlayerFinish(playerElement, userId) {
         let ratingObserverConfig = { attributes: true };
@@ -559,24 +528,63 @@
         }
     };
 
-    let playersObserver = new MutationObserver(playersCallback);
-    playersObserver.observe(playersElement, playersObserverConfig);
+    async function init() {
+        let gameId = searchParams.get('gmid');
+        let info = await httpGet(location.protocol + '//klavogonki.ru/g/' + gameId + '.info');
+        let gameTypeLocal = info.params.gametype;
 
-    const statusCallback = async function (mutationsList, observer) {
-        if (mutationsList.length === 0) {
+        if (!gameTypeLocal) {
+            gameTypeLocal = info.params.gametype_clean;
+        }
+
+        if (!gameTypeLocal) {
             return;
         }
-        let raceStatus = mutationsList[0].target.className;
 
-        // stop watching DOM once the race has been started, so no new players can join
-        if (raceStatus === 'go') {
-            playersObserver.disconnect();
-            observer.disconnect();
+        if (gameTypes.length && !gameTypes.includes(gameTypeLocal)) {
+            logDebug('Stop executing for game type ' + gameTypeLocal);
+            return;
         }
-    };
 
-    let statusObserver = new MutationObserver(statusCallback);
-    statusObserver.observe(statusElement, statusObserverConfig);
+        gameType = gameTypeLocal;
 
-    await initIndicators();
+        var playersObserverConfig = { childList: true };
+        let playersElement = document.querySelector('#players');
+
+        let statusObserverConfig = { attributes: true };
+        let statusElement = document.querySelector('#status');
+
+        let playersObserver = new MutationObserver(playersCallback);
+        playersObserver.observe(playersElement, playersObserverConfig);
+
+        const statusCallback = async function (mutationsList, observer) {
+            if (mutationsList.length === 0) {
+                return;
+            }
+            let raceStatus = mutationsList[0].target.className;
+
+            // stop watching DOM once the race has been started, so no new players can join
+            if (raceStatus === 'go') {
+                playersObserver.disconnect();
+                observer.disconnect();
+            }
+        };
+
+        let statusObserver = new MutationObserver(statusCallback);
+        statusObserver.observe(statusElement, statusObserverConfig);
+
+        await initIndicators(info);
+    }
+
+    let searchParams = new URLSearchParams(window.location.search);
+    if (!searchParams.has("gmid")) {
+        return;
+    }
+
+    if (window.getComputedStyle(document.querySelector("#competition_alert")).display !== "none") {
+        // competition_alert not yet confirmed
+        return;
+    }
+
+    await init();
 })();
