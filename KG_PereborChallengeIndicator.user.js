@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_PereborChallengeIndicator
-// @version        1.1.3
+// @version        1.2.0
 // @namespace      klavogonki
 // @author         vnest
 // @description    Индикатор выполненной за сутки нормы 90/95% от рекорда (или поставленного рекорда) у игроков во время заезда
@@ -15,11 +15,16 @@
     // Настройки
     ///////////////////////////////////////////////////////////////////////////////
 
+    // Настройка позволяет перезаписать остальные настройки, сохраненные в браузере
+    // Установите true, когда хотите изменить настройки сохраненные в брузере - перезаписать их настройками из скрипта
+    // Установите false, чтобы отключить перезаписывание настроек в браузере, чтобы при обновлениях скрипта ваши настройки не сбрасывались на настройки по-умолчанию
+    const overrideSettings = false;
+
     // Поменяйте на нужные вам цвета (могут быть в формате HEX например "#FF0000")
     // и коэффициенты, можно, например, оставить только 0.95, или, наоборот добавить 0.85
     // Нужно обязательно указать в убывающем порядке, иначе скрипт будет работать некорректно
     // Дополнительно тут указываются heroChar символы, которые будут отображаться за достижение заданных скоростей определнное количество дней подряд
-    const targetSpeeds = {
+    let targetSpeeds = {
         "red": {
             "coeff": 1,
             "heroChar": "✪"
@@ -43,9 +48,9 @@
     };
 
     // Настройка включает дополнительный индикатор за достижение заданных скоростей определнное количество дней подряд
-    const enableStraightDaysIndicator = true;
+    let enableStraightDaysIndicator = true;
     // Поменяйте на нужные вам цвета и количество дней подряд, в течение которых будет отслеживаться достижений заданных скоростей
-    const straightDaysColors = {
+    let straightDaysColors = {
         "#fb031a": 30,
         "#fb03f2": 20,
         "#fba103": 13,
@@ -69,16 +74,43 @@
     // По словарю - "voc-XXXX", где XXXX - номер словаря (виден в адресной строке), например Соточка - "voc-25856"
     //
     // Пример для обычного и обычного in English - const gameTypes = ["normal", "voc-5539"];
-    const gameTypes = [];
+    let gameTypes = [];
 
     // Настройка включает загрузку детальной статистики и отображение расширенного индикатора, показывающего количество соответствующих достижений
     // Детальная статистика за день доступна только у пользователей c премиум-аккаунтами
     // Установите false вместо true, чтобы отключить попытки загузки такой статистики, и всегда показывать только базовый индикатор в виде одной звездочки
-    const enableDetailedStats = true;
+    let enableDetailedStats = true;
 
     ///////////////////////////////////////////////////////////////////////////////
     // Конец настроек
     ///////////////////////////////////////////////////////////////////////////////
+
+    const localStorageName = "KG_Perebor";
+    const settingTargetSpeeds = `${localStorageName}.targetSpeeds`;
+    const settingEnableStraightDaysIndicator = `${localStorageName}.enableStraightDaysIndicator`;
+    const settingStraightDaysColors = `${localStorageName}.straightDaysColors`;
+    const settingGameTypes = `${localStorageName}.gameTypes`;
+    const settingEnableDetailedStats = `${localStorageName}.enableDetailedStats`;
+
+    function processSetting(settingName, setting, isJson) {
+        if(overrideSettings) {
+            localStorage[settingName] = isJson ? JSON.stringify(setting) : setting;    
+        } else {
+            if(localStorage[settingName]) {
+                setting = isJson ? JSON.parse(localStorage[settingName]) : localStorage[settingName];
+            } else {
+                localStorage[settingName] = isJson ? JSON.stringify(setting) : setting;
+            }
+        }
+
+        return setting;
+    }
+
+    targetSpeeds = processSetting(settingTargetSpeeds, targetSpeeds, true);
+    enableStraightDaysIndicator = processSetting(settingEnableStraightDaysIndicator, enableStraightDaysIndicator, false);
+    straightDaysColors = processSetting(settingStraightDaysColors, straightDaysColors, true);
+    gameTypes = processSetting(settingGameTypes, gameTypes, true);
+    enableDetailedStats = processSetting(settingEnableDetailedStats, enableDetailedStats, false);
 
     let bestSpeedByUser = {};
     let gameType;
