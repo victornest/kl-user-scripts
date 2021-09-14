@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_PereborChallengeIndicator
-// @version        1.2.0
+// @version        1.2.1
 // @namespace      klavogonki
 // @author         vnest
 // @description    Индикатор выполненной за сутки нормы 90/95% от рекорда (или поставленного рекорда) у игроков во время заезда
@@ -93,10 +93,10 @@
     const settingEnableDetailedStats = `${localStorageName}.enableDetailedStats`;
 
     function processSetting(settingName, setting, isJson) {
-        if(overrideSettings) {
-            localStorage[settingName] = isJson ? JSON.stringify(setting) : setting;    
+        if (overrideSettings) {
+            localStorage[settingName] = isJson ? JSON.stringify(setting) : setting;
         } else {
-            if(localStorage[settingName]) {
+            if (localStorage[settingName]) {
                 setting = isJson ? JSON.parse(localStorage[settingName]) : localStorage[settingName];
             } else {
                 localStorage[settingName] = isJson ? JSON.stringify(setting) : setting;
@@ -528,9 +528,11 @@
 
                     if (userSpeedAchieved) {
                         logDebug('achieved ' + targetSpeedItem.coeff * 100 + '%!', userId);
-                        //TODO: add element
-                        let achievementIndicator = '<a class="perebor-achievement" style="color: ' + keyColor + '; border-bottom: 1px dashed ' + keyColor + ';">* ' + targetSpeedItem.coeff * 100 + '% от рекорда!' + '<a>';
-                        recordElement.insert(achievementIndicator);
+                        let achievementIndicatorExists = recordElement.querySelectorAll('.perebor-achievement').length > 0;
+                        if (!achievementIndicatorExists) {
+                            let achievementIndicator = '<a class="perebor-achievement" style="color: ' + keyColor + '; border-bottom: 1px dashed ' + keyColor + ';">* ' + targetSpeedItem.coeff * 100 + '% от рекорда!' + '<a>';
+                            recordElement.insert(achievementIndicator);
+                        }
                         break;
                     }
                 }
