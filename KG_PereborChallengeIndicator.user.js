@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_PereborChallengeIndicator
-// @version        1.2.1
+// @version        1.3.0
 // @namespace      klavogonki
 // @author         vnest
 // @description    Индикатор выполненной за сутки нормы 90/95% от рекорда (или поставленного рекорда) у игроков во время заезда
@@ -520,17 +520,18 @@
             let userBestSpeed = bestSpeedByUser[userId];
             logDebug('user finished best speed', userBestSpeed);
 
-            if (userBestSpeed > resultSpeed) {
+            if (userBestSpeed >= resultSpeed) {
                 for (let keyColor of Object.keys(targetSpeeds)) {
                     let targetSpeedItem = targetSpeeds[keyColor];
                     let userTargetSpeed = Math.ceil(userBestSpeed * targetSpeedItem.coeff);
                     let userSpeedAchieved = resultSpeed >= userTargetSpeed;
 
                     if (userSpeedAchieved) {
-                        logDebug('achieved ' + targetSpeedItem.coeff * 100 + '%!', userId);
+                        let achievedPercentage = Math.floor((resultSpeed / userBestSpeed) * 100);
+                        logDebug('achieved ' + achievedPercentage + '%!', userId);
                         let achievementIndicatorExists = recordElement.querySelectorAll('.perebor-achievement').length > 0;
                         if (!achievementIndicatorExists) {
-                            let achievementIndicator = '<a class="perebor-achievement" style="color: ' + keyColor + '; border-bottom: 1px dashed ' + keyColor + ';">* ' + targetSpeedItem.coeff * 100 + '% от рекорда!' + '<a>';
+                            let achievementIndicator = '<a class="perebor-achievement" style="color: ' + keyColor + '; border-bottom: 1px dashed ' + keyColor + ';">* ' + achievedPercentage + '% от рекорда!' + '<a>';
                             recordElement.insert(achievementIndicator);
                         }
                         break;
