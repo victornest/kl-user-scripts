@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_PereborChallengeIndicator
-// @version        1.3.0
+// @version        1.4.0
 // @namespace      klavogonki
 // @author         vnest
 // @description    Индикатор выполненной за сутки нормы 90/95% от рекорда (или поставленного рекорда) у игроков во время заезда
@@ -20,6 +20,11 @@
     // Установите false, чтобы отключить перезаписывание настроек в браузере, чтобы при обновлениях скрипта ваши настройки не сбрасывались на настройки по-умолчанию
     const overrideSettings = false;
 
+    // Сколько раз повторять запросы статистики на сервер, если получена ошибка (429 - "слишком много запросов")
+    const retryCount = 10;
+    // Интервал в милисекундах между повтороами в случае ошибки запроса(429 - "слишком много запросов")
+    const retryTimeout = 500;
+
     // Поменяйте на нужные вам цвета (могут быть в формате HEX например "#FF0000")
     // и коэффициенты, можно, например, оставить только 0.95, или, наоборот добавить 0.85
     // Нужно обязательно указать в убывающем порядке, иначе скрипт будет работать некорректно
@@ -33,7 +38,7 @@
             "coeff": 0.95,
             "heroChar": "@"
         },
-        "blue": {
+        "#0075FF": {
             "coeff": 0.90,
             "heroChar": "#"
         },
@@ -153,12 +158,35 @@
         console.error(getLogMessage(message), parameters);
     }
 
-    function httpGet(url) {
+    function sleep (milliseconds) {
+        return new Promise((resolve) => setTimeout(resolve, milliseconds))
+    }
+
+    function httpGet(url, retriesLeft) {
+        if(retriesLeft == undefined) {
+            retriesLeft = retryCount;
+        }
         return new Promise((resolve, reject) => {
             let xhr = new XMLHttpRequest();
             xhr.open("Get", url);
-            xhr.onload = () => resolve(JSON.parse(xhr.responseText));
-            xhr.onerror = () => reject(logError(xhr.statusText));
+            xhr.onload = () => {
+                if(xhr.status == 200) {
+                    return resolve(JSON.parse(xhr.responseText));
+                } else if (xhr.status == 429) {
+                    logDebug('RETRIES LEFT ' + retriesLeft, xhr);
+                    if(retriesLeft > 0) {
+                        retriesLeft--;
+                        sleep(retryTimeout).then(() => {
+                            return resolve(httpGet(url, retriesLeft));
+                        });
+                    } else {
+                        return reject(logError(xhr.status + '; ' + xhr.responseText));
+                    }
+                }
+            };
+            xhr.onerror = () => {
+                return reject(logError(xhr.statusText));
+            };
             xhr.send();
         });
     }
@@ -460,7 +488,7 @@
                     logDebug('IndicatorDays for user ' + userId + ' already exists');
                     break;
                 }
-                let pereborIndicator = '<span class="perebor-days" style="background-color:black; color: ' + straightDaysColorsKey + ';">' + targetSpeedItem.heroChar + '<span>';
+                let pereborIndicator = '<span class="perebor-days" style="background-color:#282B2F; color: ' + straightDaysColorsKey + ';">' + targetSpeedItem.heroChar + '<span>';
                 carRatingElement.insert(pereborIndicator);
 
                 break;
