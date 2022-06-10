@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_Covers_Normal_EN
-// @version        1.0.0
+// @version        1.0.1
 // @namespace      klavogonki
 // @author         vnest
 // @description    Скрипт добавляет обложки для текстов из словаря "Обычный in English"
@@ -279,7 +279,7 @@
             "title": "The Man of Property",
             "cover": "https://i.imgur.com/2pVvz3g.jpg?1"
         },
-        "Old Jolyon had taken his cigar from under his white moustaches, stained by coffee at the edge, and looked at her, that little slip of a thing who had got such a grip of his heart. He knew more about \"": {
+        "Old Jolyon had taken his cigar from under his white moustaches, stained by coffee at the edge, and looked at her, that little slip of a thing who had got such a grip of his heart. He knew more about '": {
             "author": "John Galsworthy",
             "title": "The Man of Property",
             "cover": "https://i.imgur.com/2pVvz3g.jpg?1"
@@ -579,7 +579,7 @@
             "title": "1984",
             "cover": "http://books.google.com/books/content?id=PpcZEAAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "Suddenly they were both leaping round him, shouting \"Traitor!\" and \"Thought-criminal!\" the little girl imitating her brother in every movement. It was somehow slightly frightening, like the gambolling": {
+        "Suddenly they were both leaping round him, shouting 'Traitor!' and 'Thought-criminal!' the little girl imitating her brother in every movement. It was somehow slightly frightening, like the gambolling": {
             "author": "George Orwell",
             "title": "1984",
             "cover": "http://books.google.com/books/content?id=PpcZEAAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
@@ -629,7 +629,7 @@
             "title": "Alice in Wonderland",
             "cover": "http://books.google.com/books/content?id=ZxwpakTv_MIC&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "\"Speak English!\" said the Eaglet. \"I don't know the meaning of half those long words, and, what's more, I don't believe you do either!\" And the Eaglet bent down its head to hide a smile: some of the o": {
+        "'Speak English!' said the Eaglet. 'I don't know the meaning of half those long words, and, what's more, I don't believe you do either!' And the Eaglet bent down its head to hide a smile: some of the o": {
             "author": "Lewis Carroll",
             "title": "Alice in Wonderland",
             "cover": "http://books.google.com/books/content?id=ZxwpakTv_MIC&printsec=frontcover&img=1&zoom=5&source=gbs_api"
@@ -644,7 +644,7 @@
             "title": "Alice in Wonderland",
             "cover": "http://books.google.com/books/content?id=ZxwpakTv_MIC&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "\"Well, be off, then!\" said the Pigeon in a sulky tone, as it settled down again into its nest. Alice crouched down among the trees as well as she could, for her neck kept getting entangled among the b": {
+        "'Well, be off, then!' said the Pigeon in a sulky tone, as it settled down again into its nest. Alice crouched down among the trees as well as she could, for her neck kept getting entangled among the b": {
             "author": "Lewis Carroll",
             "title": "Alice in Wonderland",
             "cover": "http://books.google.com/books/content?id=ZxwpakTv_MIC&printsec=frontcover&img=1&zoom=5&source=gbs_api"
@@ -654,22 +654,22 @@
             "title": "Alice in Wonderland",
             "cover": "http://books.google.com/books/content?id=ZxwpakTv_MIC&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "Once more she found herself in the long hall, and close to the little glass table. \"Now, I'll manage better this time,\" she said to herself, and began by taking the little golden key, and unlocking th": {
+        "Once more she found herself in the long hall, and close to the little glass table. 'Now, I'll manage better this time,' she said to herself, and began by taking the little golden key, and unlocking th": {
             "author": "Lewis Carroll",
             "title": "Alice in Wonderland",
             "cover": "http://books.google.com/books/content?id=ZxwpakTv_MIC&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "But here, to Alice's great surprise, the Duchess's voice died away, even in the middle of her favourite word \"moral,\" and the arm that was linked into hers began to tremble. Alice looked up, and there": {
+        "But here, to Alice's great surprise, the Duchess's voice died away, even in the middle of her favourite word 'moral,' and the arm that was linked into hers began to tremble. Alice looked up, and there": {
             "author": "Lewis Carroll",
             "title": "Alice in Wonderland",
             "cover": "http://books.google.com/books/content?id=ZxwpakTv_MIC&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "The Mock Turtle sighed deeply, and drew the back of one flapper across his eyes. He looked at Alice, and tried to speak, but for a minute or two sobs choked his voice. \"Same as if he had a bone in his": {
+        "The Mock Turtle sighed deeply, and drew the back of one flapper across his eyes. He looked at Alice, and tried to speak, but for a minute or two sobs choked his voice. 'Same as if he had a bone in his": {
             "author": "Lewis Carroll",
             "title": "Alice in Wonderland",
             "cover": "http://books.google.com/books/content?id=ZxwpakTv_MIC&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "\"A nice muddle their slates'll be in before the trial's over!\" thought Alice. One of the jurors had a pencil that squeaked. This of course, Alice could not stand, and she went round the court and got ": {
+        "'A nice muddle their slates'll be in before the trial's over!' thought Alice. One of the jurors had a pencil that squeaked. This of course, Alice could not stand, and she went round the court and got ": {
             "author": "Lewis Carroll",
             "title": "Alice in Wonderland",
             "cover": "http://books.google.com/books/content?id=ZxwpakTv_MIC&printsec=frontcover&img=1&zoom=5&source=gbs_api"
@@ -769,7 +769,7 @@
             "title": "Charlie and the Chocolate Factory",
             "cover": "http://books.google.com/books/content?id=TpGWiBzrxhAC&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "Mr Wonka suddenly exploded with excitement. \"But my dear boy,\" he cried out, \"that means you've won!\" He rushed out of the lift and started shaking Charlie's hand so furiously it nearly came off. \"Oh,": {
+        "Mr Wonka suddenly exploded with excitement. 'But my dear boy,' he cried out, 'that means you've won!' He rushed out of the lift and started shaking Charlie's hand so furiously it nearly came off. 'Oh,": {
             "author": "Roald Dahl",
             "title": "Charlie and the Chocolate Factory",
             "cover": "http://books.google.com/books/content?id=TpGWiBzrxhAC&printsec=frontcover&img=1&zoom=5&source=gbs_api"
@@ -2834,12 +2834,12 @@
             "title": "Alice Through the Looking Glass",
             "cover": "http://books.google.com/books/content?id=9R0jDAAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "All this time the Guard was looking at her, first through a telescope, then through a microscope, and then through an opera-glass. At last he said, \"You're travelling the wrong way,\" and shut up the w": {
+        "All this time the Guard was looking at her, first through a telescope, then through a microscope, and then through an opera-glass. At last he said, 'You're travelling the wrong way,' and shut up the w": {
             "author": "Lewis Carroll",
             "title": "Alice Through the Looking Glass",
             "cover": "http://books.google.com/books/content?id=9R0jDAAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "Alice couldn't say honestly that he was. He had a tall red night-cap on, with a tassel, and he was lying crumpled up into a sort of untidy heap, and snoring loud - \"fit to snore his head off!\" as Twee": {
+        "Alice couldn't say honestly that he was. He had a tall red night-cap on, with a tassel, and he was lying crumpled up into a sort of untidy heap, and snoring loud - 'fit to snore his head off!' as Twee": {
             "author": "Lewis Carroll",
             "title": "Alice Through the Looking Glass",
             "cover": "http://books.google.com/books/content?id=9R0jDAAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
@@ -2849,12 +2849,12 @@
             "title": "Alice Through the Looking Glass",
             "cover": "http://books.google.com/books/content?id=9R0jDAAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "However, she wasn't hurt, and was soon up again: the Sheep went on with her knitting all the while, just as if nothing had happened. \"That was a nice crab you caught!\" she remarked, as Alice got back ": {
+        "However, she wasn't hurt, and was soon up again: the Sheep went on with her knitting all the while, just as if nothing had happened. 'That was a nice crab you caught!' she remarked, as Alice got back ": {
             "author": "Lewis Carroll",
             "title": "Alice Through the Looking Glass",
             "cover": "http://books.google.com/books/content?id=9R0jDAAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "This was rather sudden, Alice thought: but, after such a VERY strong hint that she ought to be going, she felt that it would hardly be civil to stay. So she got up, and held out her hand. \"Good-bye, t": {
+        "This was rather sudden, Alice thought: but, after such a VERY strong hint that she ought to be going, she felt that it would hardly be civil to stay. So she got up, and held out her hand. 'Good-bye, t": {
             "author": "Lewis Carroll",
             "title": "Alice Through the Looking Glass",
             "cover": "http://books.google.com/books/content?id=9R0jDAAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
@@ -2969,7 +2969,7 @@
             "title": "Gulliver's Travels",
             "cover": "http://books.google.com/books/content?id=cQ4pEAAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "The Psychologist recovered from his stupor, and suddenly looked under the table. At that the Time Traveller laughed cheerfully. \"Well?\" he said, with a reminiscence of the Psychologist. Then, getting ": {
+        "The Psychologist recovered from his stupor, and suddenly looked under the table. At that the Time Traveller laughed cheerfully. 'Well?' he said, with a reminiscence of the Psychologist. Then, getting ": {
             "author": "H.G. Wells",
             "title": "The Time Machine",
             "cover": "http://books.google.com/books/content?id=iNIQDQAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
@@ -3009,7 +3009,7 @@
             "title": "The Time Machine",
             "cover": "http://books.google.com/books/content?id=iNIQDQAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "The Time Traveller put his hand to his head. He spoke like one who was trying to keep hold of an idea that eluded him. \"They were put into my pocket by Weena, when I travelled into Time.\" He stared ro": {
+        "The Time Traveller put his hand to his head. He spoke like one who was trying to keep hold of an idea that eluded him. 'They were put into my pocket by Weena, when I travelled into Time.' He stared ro": {
             "author": "H.G. Wells",
             "title": "The Time Machine",
             "cover": "http://books.google.com/books/content?id=iNIQDQAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
@@ -5939,7 +5939,7 @@
             "title": "The Lord of the Rings: The fellowship of the ring",
             "cover": "https://i.imgur.com/6Yfqsp4.png?1"
         },
-        "The Authorities, it is true, differ whether this last question was a mere \"question\" and not a \"riddle\" according to the strict rules of the Game; but all agree that, after accepting it and trying to ": {
+        "The Authorities, it is true, differ whether this last question was a mere 'question' and not a 'riddle' according to the strict rules of the Game; but all agree that, after accepting it and trying to ": {
             "author": "John Ronald Reuel Tolkien",
             "title": "The Lord of the Rings: The fellowship of the ring",
             "cover": "https://i.imgur.com/6Yfqsp4.png?1"
@@ -5949,7 +5949,7 @@
             "title": "The Lord of the Rings: The fellowship of the ring",
             "cover": "https://i.imgur.com/6Yfqsp4.png?1"
         },
-        "There might have been some grumbling about \"dealing locally,\" but that very week orders began to pour out of Bag End for every kind of provision, commodity, or luxury that could be obtained in Hobbito": {
+        "There might have been some grumbling about 'dealing locally,' but that very week orders began to pour out of Bag End for every kind of provision, commodity, or luxury that could be obtained in Hobbito": {
             "author": "John Ronald Reuel Tolkien",
             "title": "The Lord of the Rings: The fellowship of the ring",
             "cover": "https://i.imgur.com/6Yfqsp4.png?1"
@@ -9584,7 +9584,7 @@
             "title": "In Chancery",
             "cover": "https://i.imgur.com/vLiwzGc.png?1"
         },
-        "She had been even prettier than he had thought her yesterday, on her silver-roan, long-tailed \"palfrey\"; and it seemed to him, self-critical in the brumous October gloaming and the outskirts of London": {
+        "She had been even prettier than he had thought her yesterday, on her silver-roan, long-tailed 'palfrey'; and it seemed to him, self-critical in the brumous October gloaming and the outskirts of London": {
             "author": "John Galsworthy",
             "title": "In Chancery",
             "cover": "https://i.imgur.com/vLiwzGc.png?1"
@@ -9619,7 +9619,7 @@
             "title": "In Chancery",
             "cover": "https://i.imgur.com/vLiwzGc.png?1"
         },
-        "He shifted to the side window which overlooked the stableyard, and whistled down to the dog Balthasar who lay for ever under the clock tower. The old dog looked up and wagged his tail. \"Poor old boy!\"": {
+        "He shifted to the side window which overlooked the stableyard, and whistled down to the dog Balthasar who lay for ever under the clock tower. The old dog looked up and wagged his tail. 'Poor old boy!'": {
             "author": "John Galsworthy",
             "title": "In Chancery",
             "cover": "https://i.imgur.com/vLiwzGc.png?1"
@@ -9764,7 +9764,7 @@
             "title": "In Chancery",
             "cover": "https://i.imgur.com/vLiwzGc.png?1"
         },
-        "Yet to have done with the Law, not to have that murky cloud hanging over her and the children! What a relief! Ah! but how to accept his return? That \"woman\" had ravaged him, taken from him passion suc": {
+        "Yet to have done with the Law, not to have that murky cloud hanging over her and the children! What a relief! Ah! but how to accept his return? That 'woman' had ravaged him, taken from him passion suc": {
             "author": "John Galsworthy",
             "title": "In Chancery",
             "cover": "https://i.imgur.com/vLiwzGc.png?1"
@@ -9779,7 +9779,7 @@
             "title": "In Chancery",
             "cover": "https://i.imgur.com/vLiwzGc.png?1"
         },
-        "She sat there a long time before her glass, fingering her rings, thinking of this subdued dark man, almost a stranger to her, on the bed in the other room; resolutely not \"worrying,\" but gnawed by jea": {
+        "She sat there a long time before her glass, fingering her rings, thinking of this subdued dark man, almost a stranger to her, on the bed in the other room; resolutely not 'worrying,' but gnawed by jea": {
             "author": "John Galsworthy",
             "title": "In Chancery",
             "cover": "https://i.imgur.com/vLiwzGc.png?1"
@@ -9959,7 +9959,7 @@
             "title": "Indian Summer of a Forsyte",
             "cover": "https://i.imgur.com/pwH0jyc.png?1"
         },
-        "She began to play again. This time the resemblance between her and \"Chopin\" struck him. The swaying he had noticed in her walk was in her playing too, and the Nocturne she had chosen and the soft dark": {
+        "She began to play again. This time the resemblance between her and 'Chopin' struck him. The swaying he had noticed in her walk was in her playing too, and the Nocturne she had chosen and the soft dark": {
             "author": "John Galsworthy",
             "title": "Indian Summer of a Forsyte",
             "cover": "https://i.imgur.com/pwH0jyc.png?1"
@@ -9969,7 +9969,7 @@
             "title": "Indian Summer of a Forsyte",
             "cover": "https://i.imgur.com/pwH0jyc.png?1"
         },
-        "The carriage stopped before a small three-storied block of flats, standing a little back from the river. With a practised eye old Jolyon saw that they were cheap. \"I should think about sixty pound a y": {
+        "The carriage stopped before a small three-storied block of flats, standing a little back from the river. With a practised eye old Jolyon saw that they were cheap. 'I should think about sixty pound a y": {
             "author": "John Galsworthy",
             "title": "Indian Summer of a Forsyte",
             "cover": "https://i.imgur.com/pwH0jyc.png?1"
@@ -9999,7 +9999,7 @@
             "title": "Indian Summer of a Forsyte",
             "cover": "https://i.imgur.com/pwH0jyc.png?1"
         },
-        "When she was gone, he thought feebly: \"Why did I say a lady in grey - she may be in anything. Sal volatile!\" He did not go off again, yet was not conscious of how Irene came to be standing beside him,": {
+        "When she was gone, he thought feebly: 'Why did I say a lady in grey - she may be in anything. Sal volatile!' He did not go off again, yet was not conscious of how Irene came to be standing beside him,": {
             "author": "John Galsworthy",
             "title": "Indian Summer of a Forsyte",
             "cover": "https://i.imgur.com/pwH0jyc.png?1"
@@ -10679,7 +10679,7 @@
             "title": "On Forsyte 'Change",
             "cover": "https://i.imgur.com/zsDguTh.png?1"
         },
-        "With a faint grin Soames dropped the yellowed letter - six years older than himself - on his knee, and sat brooding. Poor old Timothy! And he had never sent it. Why not? Never \"put it to the touch\" af": {
+        "With a faint grin Soames dropped the yellowed letter - six years older than himself - on his knee, and sat brooding. Poor old Timothy! And he had never sent it. Why not? Never 'put it to the touch' af": {
             "author": "John Galsworthy",
             "title": "On Forsyte 'Change",
             "cover": "https://i.imgur.com/zsDguTh.png?1"
@@ -10754,7 +10754,7 @@
             "title": "On Forsyte 'Change",
             "cover": "https://i.imgur.com/zsDguTh.png?1"
         },
-        "When June had gone, he sat contemplating the ash of his cigar. Children! What things they thought of! She would learn some day that you couldn't go \"protecting\" everything you came across. Sooner the ": {
+        "When June had gone, he sat contemplating the ash of his cigar. Children! What things they thought of! She would learn some day that you couldn't go 'protecting' everything you came across. Sooner the ": {
             "author": "John Galsworthy",
             "title": "On Forsyte 'Change",
             "cover": "https://i.imgur.com/zsDguTh.png?1"
@@ -10879,12 +10879,12 @@
             "title": "On Forsyte 'Change",
             "cover": "https://i.imgur.com/zsDguTh.png?1"
         },
-        "Having been out of London since the Boer war broke out they had not yet heard \"Tommy Atkins\" sung; and when this inevitable item was reached the effect on Giles was observed by Jesse to be as noticeab": {
+        "Having been out of London since the Boer war broke out they had not yet heard 'Tommy Atkins' sung; and when this inevitable item was reached the effect on Giles was observed by Jesse to be as noticeab": {
             "author": "John Galsworthy",
             "title": "On Forsyte 'Change",
             "cover": "https://i.imgur.com/zsDguTh.png?1"
         },
-        "Jesse turned, and, leaning back against the balustrade, surveyed the promenaders. Giles, with mechanical conformity, had done the same. The girl continued to stare at the stage. If she had been \"kiddi": {
+        "Jesse turned, and, leaning back against the balustrade, surveyed the promenaders. Giles, with mechanical conformity, had done the same. The girl continued to stare at the stage. If she had been 'kiddi": {
             "author": "John Galsworthy",
             "title": "On Forsyte 'Change",
             "cover": "https://i.imgur.com/zsDguTh.png?1"
@@ -11004,7 +11004,7 @@
             "title": "On Forsyte 'Change",
             "cover": "https://i.imgur.com/zsDguTh.png?1"
         },
-        "Coming down the steps of \"Snooks\" Club, so nicknamed by George Forsyte in the late eighties, on that momentous mid-October afternoon of 1922, Sir Lawrence Mont, ninth baronet, set his fine nose toward": {
+        "Coming down the steps of 'Snooks' Club, so nicknamed by George Forsyte in the late eighties, on that momentous mid-October afternoon of 1922, Sir Lawrence Mont, ninth baronet, set his fine nose toward": {
             "author": "John Galsworthy",
             "title": "The White Monkey",
             "cover": "http://books.google.com/books/content?id=fk7rDwAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
@@ -11014,7 +11014,7 @@
             "title": "The White Monkey",
             "cover": "http://books.google.com/books/content?id=fk7rDwAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "The house in South Square, Westminster, to which the young Monts had come after their Spanish honeymoon two years before, might have been called \"emancipated.\" It was the work of an architect whose dr": {
+        "The house in South Square, Westminster, to which the young Monts had come after their Spanish honeymoon two years before, might have been called 'emancipated.' It was the work of an architect whose dr": {
             "author": "John Galsworthy",
             "title": "The White Monkey",
             "cover": "http://books.google.com/books/content?id=fk7rDwAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
@@ -11029,7 +11029,7 @@
             "title": "The White Monkey",
             "cover": "http://books.google.com/books/content?id=fk7rDwAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "The corridor, and refectory beyond, were swarming with the restoration movement. Young men and women with faces and heads of lively and distorted character, were exchanging the word \"interesting.\" Men": {
+        "The corridor, and refectory beyond, were swarming with the restoration movement. Young men and women with faces and heads of lively and distorted character, were exchanging the word 'interesting.' Men": {
             "author": "John Galsworthy",
             "title": "The White Monkey",
             "cover": "http://books.google.com/books/content?id=fk7rDwAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
@@ -11264,7 +11264,7 @@
             "title": "To Let",
             "cover": "http://books.google.com/books/content?id=IRe4DAAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         },
-        "Two swans had come, sheltering in among the reeds. He knew the birds well, and stood watching the dignity in the curve of those white necks and formidable snake-like heads. \"Not dignified - what I hav": {
+        "Two swans had come, sheltering in among the reeds. He knew the birds well, and stood watching the dignity in the curve of those white necks and formidable snake-like heads. 'Not dignified - what I hav": {
             "author": "John Galsworthy",
             "title": "To Let",
             "cover": "http://books.google.com/books/content?id=IRe4DAAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
@@ -11504,7 +11504,7 @@
             "title": "The White Monkey",
             "cover": "https://i.imgur.com/JmMPV12.png?1"
         },
-        "And he went up to his bed. If there was point in anything, it was in perpetuation of oneself, though, of course, that begged the question. \"Wonder,\" he thought, \"if I ought to have asked her whether t": {
+        "And he went up to his bed. If there was point in anything, it was in perpetuation of oneself, though, of course, that begged the question. 'Wonder,' he thought, 'if I ought to have asked her whether t": {
             "author": "John Galsworthy",
             "title": "The White Monkey",
             "cover": "https://i.imgur.com/JmMPV12.png?1"
@@ -11554,7 +11554,7 @@
             "title": "The White Monkey",
             "cover": "https://i.imgur.com/JmMPV12.png?1"
         },
-        "Victorine followed him in. It was \"not half\" sea-green in there; a high room with rafters and a top light, and lots of pictures and drawings on the walls, and as if they had slipped off on to the floo": {
+        "Victorine followed him in. It was 'not half' sea-green in there; a high room with rafters and a top light, and lots of pictures and drawings on the walls, and as if they had slipped off on to the floo": {
             "author": "John Galsworthy",
             "title": "The White Monkey",
             "cover": "https://i.imgur.com/JmMPV12.png?1"
@@ -11569,7 +11569,7 @@
             "title": "The White Monkey",
             "cover": "https://i.imgur.com/JmMPV12.png?1"
         },
-        "Neither by her wish, nor through her fault, was he passionate! And yet - it was both nice and proper to inspire passion; and, of course, she had the lurking sense that she was not \"in the mode\" to cav": {
+        "Neither by her wish, nor through her fault, was he passionate! And yet - it was both nice and proper to inspire passion; and, of course, she had the lurking sense that she was not 'in the mode' to cav": {
             "author": "John Galsworthy",
             "title": "The White Monkey",
             "cover": "https://i.imgur.com/JmMPV12.png?1"
@@ -11724,7 +11724,7 @@
             "title": "The White Monkey",
             "cover": "https://i.imgur.com/JmMPV12.png?1"
         },
-        "Back-centre of the platform was a door, and in front, below it, a table, where four men were sitting, fiddling with notebooks. \"Orchestra,\" thought Michael. He turned his attention to the eight or ten": {
+        "Back-centre of the platform was a door, and in front, below it, a table, where four men were sitting, fiddling with notebooks. 'Orchestra,' thought Michael. He turned his attention to the eight or ten": {
             "author": "John Galsworthy",
             "title": "The White Monkey",
             "cover": "https://i.imgur.com/JmMPV12.png?1"
@@ -11884,7 +11884,7 @@
             "title": "The Silver Spoon",
             "cover": "https://i.imgur.com/k6oxFrd.png?1"
         },
-        "Except that he did not like to get into them, Soames took on the whole a favourable view of \"the papers.\" He read The Times; his father had read it before him, and he had been brought up on its crackl": {
+        "Except that he did not like to get into them, Soames took on the whole a favourable view of 'the papers.' He read The Times; his father had read it before him, and he had been brought up on its crackl": {
             "author": "John Galsworthy",
             "title": "The Silver Spoon",
             "cover": "https://i.imgur.com/k6oxFrd.png?1"
@@ -11984,7 +11984,7 @@
             "title": "The Silver Spoon",
             "cover": "https://i.imgur.com/k6oxFrd.png?1"
         },
-        "He went up-stairs and sat down before \"The White Monkey.\" In that strategic position he better perceived the core of his domestic moment. Fleur had to be first - had to take precedence. No object in h": {
+        "He went up-stairs and sat down before 'The White Monkey.' In that strategic position he better perceived the core of his domestic moment. Fleur had to be first - had to take precedence. No object in h": {
             "author": "John Galsworthy",
             "title": "The Silver Spoon",
             "cover": "https://i.imgur.com/k6oxFrd.png?1"
@@ -12114,7 +12114,7 @@
             "title": "The Two Towers",
             "cover": "https://i.imgur.com/ZMVLx71.png?1"
         },
-        "The sounds had died away. Evidently Mauhur and his \"lads\" had been killed or driven off. The Riders had returned to their silent ominous vigil. It would not last very much longer. Already the night wa": {
+        "The sounds had died away. Evidently Mauhur and his 'lads' had been killed or driven off. The Riders had returned to their silent ominous vigil. It would not last very much longer. Already the night wa": {
             "author": "John Ronald Reuel Tolkien",
             "title": "The Two Towers",
             "cover": "https://i.imgur.com/ZMVLx71.png?1"
@@ -12209,7 +12209,7 @@
             "title": "The Two Towers",
             "cover": "https://i.imgur.com/ZMVLx71.png?1"
         },
-        "He stepped down from the rock, and picking up his grey cloak wrapped it about him: it seemed as if the sun had been shining, but now was hid in cloud again. \"Yes, you may still call me Gandalf,\" he sa": {
+        "He stepped down from the rock, and picking up his grey cloak wrapped it about him: it seemed as if the sun had been shining, but now was hid in cloud again. 'Yes, you may still call me Gandalf,' he sa": {
             "author": "John Ronald Reuel Tolkien",
             "title": "The Two Towers",
             "cover": "https://i.imgur.com/ZMVLx71.png?1"
@@ -12254,7 +12254,7 @@
             "title": "The Two Towers",
             "cover": "https://i.imgur.com/ZMVLx71.png?1"
         },
-        "And he looked down upon her fair face and smiled; but as he took the cup, his hand met hers, and he knew that she trembled at the touch. \"Hail Aragorn son of Arathorn!\" she said. \"Hail Lady of Rohan!\"": {
+        "And he looked down upon her fair face and smiled; but as he took the cup, his hand met hers, and he knew that she trembled at the touch. 'Hail Aragorn son of Arathorn!' she said. 'Hail Lady of Rohan!'": {
             "author": "John Ronald Reuel Tolkien",
             "title": "The Two Towers",
             "cover": "https://i.imgur.com/ZMVLx71.png?1"
@@ -17712,7 +17712,7 @@
         "Ariel walked out of the tunnel stop and located the coordinates of the last sighting of the visitors without any trouble. Her only problem was what to do next. She was in the middle of the city, stand": {
             "author": "William F. Wu",
             "title": "Cyborg",
-            "cover": "http://books.google.com/books/content?id=FnZdwV3s1FcC&printsec=frontcover&img=1&zoom=5&source=gbs_api"
+            "cover": "https://i.imgur.com/UcB23ZG.png?1"
         },
         "It straddled a waterfall; had a terrace cantilevered out into the mist rising from the fall. It was a cunning lattice of very light steel posts and beams. The interstices of the lattice were variously": {
             "author": "Kurt Vonnegut",
