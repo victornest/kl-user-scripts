@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_Covers_MiniMarathon_EN
-// @version        0.3.9
+// @version        0.4.7
 // @namespace      klavogonki
 // @author         vnest
 // @description    Скрипт добавляет обложки для текстов из словаря "Мини-марафон in English"
@@ -1535,464 +1535,709 @@
             "cover": "https://i.imgur.com/U6bYX1h.png?1"
         },
         "Not a smile on one countenance among the crowd who pass and repass; hurried steps, careworn faces, rapid exchanges of salutation, or hasty communication of anticipated ruin before the sun goes down. H": {
-            "author": "Captain Marryat",
+            "author": "Frederick Marryat",
             "title": "Diary in America, Series One",
-            "cover": ""
+            "cover": "https://i.imgur.com/T9KiFTm.png?1"
         },
         "I then understood for the first time that it is not just any girl who is picked up by the Gorean slavers, but that the acquisition of each of these doubtless had been planned with the same diligence a": {
             "author": "John Norman",
             "title": "Assassin of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/KYVPePc.png?1"
         },
         "The seas grew so high that our scrap of sail hung slack from the yard when in the trough, filling with a report like a musket shot as the following sea raised us high aloft. Then the launch would rush": {
             "author": "Charles Nordhoff, James Norman Hall",
             "title": "Men Against the Sea",
-            "cover": ""
+            "cover": "https://i.imgur.com/Qb505Pe.png?1"
         },
         "She remembered the alcohol stove, cold winter mornings, the old man hunched in his big gray coat. Winters he'd put a second layer of plastic over the windows. The stove was enough to heat the place, t": {
             "author": "William Gibson",
             "title": "Mona Lisa Overdrive",
-            "cover": ""
+            "cover": "https://i.imgur.com/9dghlTS.png?1"
         },
         "Then, in the midst of his imagined triumph, another thought: I will be the one held responsible from then on if anything goes wrong. I will be the one blamed for every misfortune on the journey. It wi": {
             "author": "Orson Scott Card",
             "title": "The Ships Of Earth",
-            "cover": ""
+            "cover": "https://i.imgur.com/G2hRTvd.png?1"
         },
         "The few who remained, old, insignificant, ill or trapped in isolated districts, they did not count; even the few young pregnant women who remained away. Nevertheless, without realizing it she was reli": {
             "author": "Marion Zimmer Bradley",
             "title": "The World Wreckers",
-            "cover": ""
+            "cover": "https://i.imgur.com/72oIINc.png?1"
         },
         "It was a mistake to give them so much power. I admit it. I'm not too proud to own up to my own mistakes. But we were tired of struggling with an uncooperative and unappreciative society. We were beate": {
             "author": "Gardner Dozois",
             "title": "Horse of Air",
-            "cover": ""
+            "cover": "https://i.imgur.com/wIOxDzy.png?1"
         },
         "The old man took the oil lamp with two hands, turned up the wick just a fraction of an inch, and held it near my face. The lamp illuminated the old man's face too. The skin had the texture of a jute s": {
             "author": "Len Deighton",
             "title": "Funeral in Berlin",
-            "cover": ""
+            "cover": "https://i.imgur.com/O0bjB1E.png?1"
         },
         "He decided to walk up the gentle slope to look over the other side into the bay, see the end of the battle and what must follow it, the sack of the Braethraborg. As he started off up the slope, lance ": {
             "author": "Harry Harrison",
             "title": "One King's Way",
-            "cover": ""
+            "cover": "https://i.imgur.com/yUzfJqj.png?1"
         },
         "Shouting to the others to scatter and look about in the brush, but not to scatter too far, he began climbing up the slope of the hill. When he had reached its top he left the path and plunged into the": {
             "author": "Philip Jose Farmer",
             "title": "The Green Odyssey",
-            "cover": ""
+            "cover": "https://i.imgur.com/qcMiUxA.png?1"
         },
         "Where do you come from? Carol was thinking. And why did you land here, in this place, at this time? She shaded her eyes from the glare of the moon and concentrated her attention on Sirius, the brighte": {
             "author": "Arthur C. Clarke, Gentry Lee",
             "title": "Cradle",
-            "cover": ""
+            "cover": "https://i.imgur.com/CX8slWa.png?1"
         },
         "With the secretiveness of a Scot, and unknown to all the others, McCoy was conducting certain experiments in a narrow gorge on the unfrequented western slope of the island. In his youth he had been ap": {
             "author": "Charles Nordhoff, James Norman Hall",
             "title": "Pitcairn's Island",
-            "cover": ""
+            "cover": "https://i.imgur.com/f3kkgjK.png?1"
         },
         "None the less, Vince felt, it was best to do all that was possible with the old man while he remained in office, and so he put down his razor and went into the living room to fiddle with the knobs of ": {
             "author": "Philip K. Dick",
             "title": "The Simulacra",
-            "cover": ""
+            "cover": "https://i.imgur.com/Ibe3D80.png?1"
         },
         "Then the monster broke Jerle's grip, leaped onto the balustrade, and took wing. It hung momentarily against the light, huge and dark and nightmarish, a harried beast in search of any haven. Tay struck": {
             "author": "Terry Brooks",
             "title": "The First King Of Shannara",
-            "cover": ""
+            "cover": "https://i.imgur.com/J3hUKFi.png?1"
         },
         "I saw myself in one of the mirrors, on all fours in the great bed. I hastily looked away. To one side there appeared to be some sliding doors. On my right, and several feet away, there was, too, a hea": {
             "author": "John Norman",
             "title": "Kajira of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/RoR9Hpw.png?1"
         },
         "Cashier Randall stood beside the ponderous door of the vault, watch in hand. It was two minutes of ten o'clock. At precisely ten the time lock on the massive steel structure, built into the solid maso": {
             "author": "Jacques Futrelle",
             "title": "The Problem of the Deserted House",
-            "cover": ""
+            "cover": "https://i.imgur.com/Nogsn40.png?1"
         },
         "Lelaine each managed to gather her coterie around her, and those two knots floundered through the snow surrounded by wards against eavesdropping. The pair seemed to be delivering tirades. Egwene could": {
             "author": "Robert Jordan",
             "title": "The Path Of Daggers",
-            "cover": ""
+            "cover": "https://i.imgur.com/BSfN3VY.png?1"
         },
         "Without taking any apparent aim, Osborne fired his rifle. Wesley's head snapped, half its smooth forehead missing; he landed on his knees and then his chest. While Ray tried to free a revolver from a ": {
             "author": "Martin Cruz Smith",
             "title": "Gorky Park",
-            "cover": ""
+            "cover": "https://i.imgur.com/wnqZTyL.png?1"
         },
         "Was the passage through a hole supposed to be this rough? If Helm's reflexes hadn't been femtosecond fast, they'd be mashed against the sides, the hull scored if not penetrated by the protuberances th": {
             "author": "Anne McCaffrey",
             "title": "Nimisha's Ship",
-            "cover": ""
+            "cover": "https://i.imgur.com/FNlyZMw.png?1"
+        },
+        "Then suddenly, unexpectedly, he caught sight of something that did. He caught only a glimpse of it, a flicker of movement, no more, and then it was gone. He pressed himself back into the shadows and w": {
+            "author": "Terry Brooks",
+            "title": "Antrax",
+            "cover": "https://i.imgur.com/hw4Iz5k.png?1"
+        },
+        "He'd arrived first, and was relaxing with a cheap American bourbon when Ming came through the door. Nomuri waved in what he hoped was not an overly boyish way. She saw him do so, and her resulting smi": {
+            "author": "Tom Clancy",
+            "title": "The Bear and the Dragon",
+            "cover": "https://i.imgur.com/h1djryy.png?1"
+        },
+        "Muzzaf nodded, stroking his beard; he was a travelled man, a man of affairs, who had been east to Sandoral, west to Kendrun, and to the capital several times. He looked about, seeing with a northerner": {
+            "author": "David Drake, S. M. Stirling",
+            "title": "The Forge",
+            "cover": "https://i.imgur.com/w3NAW7J.png?1"
+        },
+        "Something crashed behind them, like a dozen city gates splintering under a score of rams, and his name hooted and gibbered at them out of the darkness. They redoubled their pace, running blindly, boun": {
+            "author": "David Weber",
+            "title": "Oath of Swords",
+            "cover": "https://i.imgur.com/0pVu99E.png?1"
+        },
+        "Strange words for a man to use to Power! But I had talked daily with him for three weeks. I lay groaning in the hut, alone. On the second day he came. I affected great rejoicing, and made shift to lig": {
+            "author": "Murray Leinster",
+            "title": "The Power",
+            "cover": "https://i.imgur.com/MD2Cx1r.png?1"
         },
         "Now he was moving purely under his own volition, toward a destination he had chosen himself. The crystal heart of Jupiter fell below; the layers upon layers of helium and hydrogen and carbonaceous com": {
             "author": "Arthur C. Clarke",
             "title": "2010: Odyssey Two",
-            "cover": ""
+            "cover": "https://i.imgur.com/0JDsoP9.png?1"
+        },
+        "Leto felt the sandtrout grow thin, spreading itself over more and more of his hand, reaching up his arm. He located another, placed it over the first one. Contact ignited a frenzied squirming in the c": {
+            "author": "Frank Herbert",
+            "title": "Children of Dune",
+            "cover": "https://i.imgur.com/xqiIWuC.png?1"
         },
         "Looking above me, up through the water, I saw the long, lean hull of the attacking vessel pass overhead. Then there was a rending noise as it gouged the starboard strakes of Spined Tharlarion. It had ": {
             "author": "John Norman",
             "title": "Guardsman of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/xih596U.png?1"
         },
         "I had hoped on being presented, days ago, to the overseer, that he might find me of interest and keep me in his tent, as a personal slut. But it was not I who was to be chosen. When I had been put bef": {
             "author": "John Norman",
             "title": "Dancer of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/v3Npbzx.jpg?1"
         },
         "The Beaver wheeled twice around the lake, but they saw nothing out of the ordinary. With the way apparently clear, Zavala pointed the plane down as if he wanted to drill a hole in the water. At the la": {
             "author": "Clive Cussler, Paul Kemprecos",
             "title": "Serpent",
-            "cover": ""
+            "cover": "https://i.imgur.com/ZnhUSil.png?1"
+        },
+        "Am I dying? he wondered. The pain was excruciating. His legs ached and he tried to move his toes. It seemed to him that he could, but then he remembered an amputee once telling him that he could still": {
+            "author": "David Gemmell",
+            "title": "Echoes Of The Great Song",
+            "cover": "https://i.imgur.com/DuUX4V0.png?1"
+        },
+        "When he stood up, he moved like a very old man. The packet was back in the lock box. Had it been a cobra, he could not have recoiled more swiftly. It took him a few moments to acquire the courage to t": {
+            "author": "John D. MacDonald",
+            "title": "The Girl, The Gold Watch And Everything",
+            "cover": "https://i.imgur.com/rc0wmgw.png?1"
         },
         "Against its far wall I could see great chests, heavy and bound with iron, filled doubtless with a raider's abundant booty, gems and golden wire, and necklaces and coins, and pearls, and jewelries and ": {
             "author": "John Norman",
             "title": "Captive of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/8DG8RV2.png?1"
+        },
+        "This is the way it works. The contemporary painter approaches his canvas without an idea (in most cases), fools around with charcoal, experimenting with lines and forms, filling in here, using a shapi": {
+            "author": "Charles Willeford",
+            "title": "The Burnt Orange Heresy",
+            "cover": "https://i.imgur.com/yNsZ1Ad.png?1"
         },
         "The fellow before me made a sign and Taurog removed his heel from my back. I could still feel its print there. I was frightened. I could feel the rough, flattened coarseness of the carpet beneath me. ": {
             "author": "John Norman",
             "title": "Dancer of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/v3Npbzx.jpg?1"
         },
         "Till this instant there had been so many physical things to do that he had only dimly comprehended what it might mean to him if he could get aboard. His mind, grooved through the uncounted ages to ult": {
             "author": "A. E. van Vogt",
             "title": "The Voyage of the Space Beagle",
-            "cover": ""
+            "cover": "https://i.imgur.com/PrSVkA4.png?1"
+        },
+        "When he listened he could hear the sounds of prisoners in the other cells along the passage, their muttering broken at intervals by outbursts of abusive shouting at their Arab guards and bitter argume": {
+            "author": "Wilbur Smith",
+            "title": "Monsoon",
+            "cover": "https://i.imgur.com/RTLi8QI.png?1"
         },
         "By mealtime Cheelo, though still nervous and worried about the poachers' state of mind, had resigned himself to his captivity. He cooperated while Hapec fed him listlessly, and he watched with as much": {
             "author": "Alan Dean Foster",
             "title": "Phylogenesis",
-            "cover": ""
+            "cover": "https://i.imgur.com/ZTlb8Ky.png?1"
+        },
+        "Trying not to be too obvious about watching the alley beside the candlemaker's, Nynaeve set the folded length of flat green braid back on the hawker's tray and slipped her hand inside her cloak to hel": {
+            "author": "Robert Jordan",
+            "title": "Winter's Heart",
+            "cover": "https://i.imgur.com/pki5X9N.png?1"
         },
         "For a moment I saw nothing. I rode the spasms in darkness. I hung helpless on the cock that skewered me. And gradually on the very end of the wave I felt my cock rising again. My Master's greased hand": {
             "author": "Anne Rice",
             "title": "Beauty’s Punishment",
-            "cover": ""
+            "cover": "https://i.imgur.com/V7mpBTU.png?1"
         },
         "Whispering words of comfort to the dying blossom, he felt the petals relax about him. He crept forth very cautiously, and found himself in an immense, gloomily vaulted hall, whose windows were like th": {
             "author": "Clark Ashton Smith",
             "title": "The Flower-Women",
-            "cover": ""
+            "cover": "https://i.imgur.com/fPOq6Xe.png?1"
         },
         "Things had then seemed calm. It seemed the ropes suspending this object would hold, that the surface on which I was confined was not likely to suddenly give way. I was then mainly grateful, in the col": {
             "author": "John Norman",
             "title": "Dancer of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/v3Npbzx.jpg?1"
+        },
+        "He turned away, and would have started back down the hill to where the chariots waited but something stopped him in his tracks. He lifted his head and tested the air again. There was still a faint whi": {
+            "author": "Wilbur Smith",
+            "title": "Warlock",
+            "cover": "https://i.imgur.com/kZoTVOJ.png?1"
+        },
+        "And it was his. Looking at it in the window glass, he felt as if a huge weight had been lifted from his shoulders. The last time he had passed into Ben Holiday's world, he had been forced to pretend h": {
+            "author": "Terry Brooks",
+            "title": "Witches' Brew",
+            "cover": "https://i.imgur.com/lXtpGqb.png?1"
+        },
+        "Holding the cloak closed with one gloved hand, she rode slowly and tried very hard, if not very successfully, not to shiver. Given the hour, it seemed more than likely she would be spending the night ": {
+            "author": "Robert Jordan",
+            "title": "Crossroads Of Twilight",
+            "cover": "https://i.imgur.com/4uUPuSY.png?1"
         },
         "Sneezy had never felt fear of the island before. Of course it was human and remote and therefore wholly strange to a Heechee boy, but it had not occurred to him that there was anything to be afraid of": {
             "author": "Frederik Pohl",
             "title": "The Annals of the Heechee",
-            "cover": ""
+            "cover": "https://i.imgur.com/yDJp76e.png?1"
         },
         "Carol walked on slowly. She pulled the computer listing that Julianne had given her from a small purple beach bag. Before she could look at it, she heard a telephone ring on her left and her eyes lift": {
             "author": "Arthur C. Clarke, Gentry Lee",
             "title": "Cradle",
-            "cover": ""
+            "cover": "https://i.imgur.com/CX8slWa.png?1"
+        },
+        "Her legs were straight and strong, her hips flared with a graceful curve and then narrowed abruptly into her waist, her belly was almost flat with just an interesting little bulge below the navel. Now": {
+            "author": "Wilbur Smith",
+            "title": "A Falcon Flies",
+            "cover": "https://i.imgur.com/S4n0VFf.png?1"
         },
         "Gorean, she approved heartily of the branding of slaves. Most female slaves on Gor, indeed, the vast majority, almost all, needless to say, are branded. Aside from questions of legality, compliance wi": {
             "author": "John Norman",
             "title": "Vagabonds of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/CUKLUpe.png?1"
         },
         "I said nothing. A girl in a market knows she is to be sold. Accordingly she will often try to influence a man she finds attractive to buy her. If he does not buy her, she knows she may be bought by on": {
             "author": "John Norman",
             "title": "Savages of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/IufILR4.png?1"
+        },
+        "The air turned to fire, the fire to light liquefied. The bolt that struck from the heavens would have seared and blinded any eye that glimpsed it, even for an instant. From the heavens it came, blazed": {
+            "author": "Robert Jordan",
+            "title": "The Eye Of The World",
+            "cover": "https://i.imgur.com/PKNirVW.png?1"
         },
         "They caught her north of the bosk herd. We could see her white body, and the dark, sinuous, furred shapes converging upon it. Then she was surrounded, and she stopped. Then the spleen opened a passage": {
             "author": "John Norman",
             "title": "Marauders of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/kSYtXqs.png?1"
         },
         "The pilot had tried to land in the field as the helicopter used up the fuel vapors powering its engine. The aircraft plunged into the canopy of foliage that was so deceivingly softlooking from above. ": {
             "author": "Clive Cussler, Paul Kemprecos",
             "title": "Serpent",
-            "cover": ""
+            "cover": "https://i.imgur.com/ZnhUSil.png?1"
         },
         "Decker set to work methodically. He hauled in wood from the dead tree and got a cooking fire started, then chopped and stored wood against the night. He set up a small tent that would serve to shelter": {
             "author": "Clifford D. Simak",
             "title": "Project Pope",
-            "cover": ""
+            "cover": "https://i.imgur.com/JbWLH1H.png?1"
+        },
+        "Without further comment, he moved quietly away to a small table at the rear of the room and seated himself with his back to the men at the bar, his face slightly bowed and turned away from Flick. The ": {
+            "author": "Terry Brooks",
+            "title": "The Sword Of Shannara",
+            "cover": "https://i.imgur.com/kgbq0AY.png?1"
         },
         "I did not know how long the rencers would give them, perhaps until dark. Already the stones might be striking together beneath the water. It seemed then for a moment that we were alone, that none were": {
             "author": "John Norman",
             "title": "Vagabonds of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/CUKLUpe.png?1"
+        },
+        "The main streets were paved with flat gray stones, but they were crowded with so many people that it was difficult to see the stones under your own boots. Most appeared to be moving aimlessly, with no": {
+            "author": "Robert Jordan",
+            "title": "The Dragon Reborn",
+            "cover": "https://i.imgur.com/uADUtvu.png?1"
+        },
+        "For the moment, delay suited Egwene perfectly, but that was not the only reason for her smile. Somewhere in all that argument, her headache had gone away entirely. She would have no difficulty at all ": {
+            "author": "Robert Jordan",
+            "title": "Crossroads Of Twilight",
+            "cover": "https://i.imgur.com/4uUPuSY.png?1"
+        },
+        "The opening passed away behind her and she stood once more in sunlight. It was midafternoon, the sun gone westward toward the treeline, its brightness dimmed by mist and clouds that floated shroudlike": {
+            "author": "Terry Brooks",
+            "title": "The Wishsong Of Shannara",
+            "cover": "https://i.imgur.com/nILkfS2.png?1"
         },
         "If it wasn't for the black security uniforms, stolen off the guards in the elevator, they would have surely been stopped and threatened with a beating for such reckless driving. Seeing an opportunity ": {
             "author": "Clive Cussler",
             "title": "Atlantis Found ",
-            "cover": ""
+            "cover": "https://i.imgur.com/YKoReEI.png?1"
         },
         "The words contained pain and contempt in equal measure. Marty couldn't help thinking of Somervale alone in a double bed; a husband without a wife, and without the faith to believe in seeing her again;": {
             "author": "Clive Barker",
             "title": "The Damnation Game",
-            "cover": ""
+            "cover": "https://i.imgur.com/FcQRhqB.png?1"
         },
         "The wagons often move. There must be new grazing for the bosk. There must be fresh rooting and browse for the tarsk and verr. The needs of these animals, on which the Alars depend for their existence,": {
             "author": "John Norman",
             "title": "Mercenaries of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/xyaPQdZ.png?1"
         },
         "Kildas? She was one of the feverishly alive brides. Her brown hair was touched with red gold in the lamp light, and she had the round chin, the full lower lip of one fashioned for the eyes of men. Eve": {
             "author": "Andre Norton",
             "title": "Year of the Unicorn",
-            "cover": ""
+            "cover": "https://i.imgur.com/6W8Fckb.png?1"
         },
         "I saw Tenalion smile. To be sure, many of the dances of female slaves are lovely and sensuous; others, of course, are piteous and orgasmic. In all fairness, though, one must note that there is a large": {
             "author": "John Norman",
             "title": "Fighting Slave of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/b2hCBck.png?1"
         },
         "Setting the pistol aside, he grumbled aloud as he sought to bind up the wound. With all the poisonous insects, lethal snakes, giant crocodilians, burrowing parasites, and voracious rodents in the rain": {
             "author": "Alan Dean Foster",
             "title": "Phylogenesis",
-            "cover": ""
+            "cover": "https://i.imgur.com/ZTlb8Ky.png?1"
         },
         "Again, this is a problem which comes from asking the wrong question. Here is someone who has never seen a cat. He is looking through a narrow slit in a fence, and, on the other side, a cat walks by. H": {
             "author": "Alan Watts",
             "title": "The Book on the Taboo Against Knowing Who You Are",
-            "cover": ""
+            "cover": "https://i.imgur.com/Dr4XQa3.png?1"
         },
         "Pirates rushed to the planked road bearing ingress to their ship, but a dozen spears, and then another dozen, hurled by running men devastated resistance, and then, on the run, swords drawn, their shi": {
             "author": "John Norman",
             "title": "Guardsman of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/xih596U.png?1"
         },
         "I plunged from the incline of the ramp, from my hands and knees, into the dark liquid, on my belly, as had the others before me, and the tarsks before them. I was suddenly almost totally immersed. I c": {
             "author": "John Norman",
             "title": "Dancer of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/v3Npbzx.jpg?1"
+        },
+        "With the tin box dangling from one hand by its wire handle and his quarterstaff held horizontally in front of him, Mat took a deep breath and started toward the Stone. He tried not to think of how far": {
+            "author": "Robert Jordan",
+            "title": "The Dragon Reborn",
+            "cover": "https://i.imgur.com/uADUtvu.png?1"
+        },
+        "SilverSide changed her shape as the Hunters turned to look up at her. She drew back the parafoil and thickened the body. Even as the Hunters raised their hands to fire their lasers, she became a strea": {
+            "author": "Stephen Leigh",
+            "title": "Changeling",
+            "cover": "https://i.imgur.com/RSXlJ6L.png?1"
         },
         "Carter now spoke with the leaders in the soft language of cats, and learned that his ancient friendship with the species was well known and often spoken of in the places where cats congregate. He had ": {
             "author": "H.P. Lovecraft",
             "title": "The Dream-Quest of Unknown Kadath",
-            "cover": ""
+            "cover": "https://i.imgur.com/V8eHs1N.png?1"
         },
         "These particular girls, it had been conjectured, had been obtained from markets in the north, where prices are often cheaper. They were now being brought south and east, probably, from their shearing,": {
             "author": "John Norman",
             "title": "Kajira of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/RoR9Hpw.png?1"
         },
         "Then the jaws opened widely, perhaps four or five feet in width, and reached for me. I tried to swing back but could move very little. I thrust the blade out, between the jaws. The jaws snapped downwa": {
             "author": "John Norman",
             "title": "Vagabonds of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/CUKLUpe.png?1"
         },
         "She half turned away on her pillows and closed her eyes. Her breathing grew more regular though it was still far from normal. Long experience of nursing made Miss Marple almost automatically straighte": {
             "author": "Agatha Christie",
             "title": "Caribbean Mystery",
-            "cover": ""
+            "cover": "https://i.imgur.com/AC2OGNN.png?1"
         },
         "We strove mightily in our lessons, to be found worthy of being raised to a higher level. This seemed almost symbolic, and was doubtless intended to be. None of us, of course, were permitted to ascend ": {
             "author": "John Norman",
             "title": "Dancer of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/v3Npbzx.jpg?1"
         },
         "Within, the smell was tantalizing. Associations were one of the curses of age. In this case the perfume of carbonized wood, and the sprawl of wreckage underfoot, evoked a dozen cities he'd wandered in": {
             "author": "Clive Barker",
             "title": "The Damnation Game",
-            "cover": ""
+            "cover": "https://i.imgur.com/FcQRhqB.png?1"
         },
         "They stood in that relation, ghost and he, for what seemed like several minutes. Certainly a good time passed before he heard a noise that was neither owl, nor rodent, filtering between the trees. It ": {
             "author": "Clive Barker",
             "title": "The Damnation Game",
-            "cover": ""
+            "cover": "https://i.imgur.com/FcQRhqB.png?1"
         },
         "Also there may be a reluctance to admit, even by the thinking of it, that man ever will become extinct. Some men (by no means all of them) can reconcile themselves to the realization that they, person": {
             "author": "Clifford D. Simak",
             "title": "Out of Their Minds",
-            "cover": ""
+            "cover": "https://i.imgur.com/crDMVkA.png?1"
+        },
+        "Then there are other ancient alluvial beds where the river has changed its course. They left the river and its narrow strip of greenery and the loco accelerated again as they ran on northwards into th": {
+            "author": "Wilbur Smith",
+            "title": "Power of the Sword",
+            "cover": "https://i.imgur.com/ThtfgL2.png?1"
         },
         "I looked down on the road. It was said that once, long ago, there had been a battle there, more than two hundred years ago, the battle of Teslit, fought between the forces of Ven and Harfax. Many do n": {
             "author": "John Norman",
             "title": "Vagabonds of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/CUKLUpe.png?1"
         },
         "There had been much fear in Kassau when the ship of Ivar Forkbeard had entered the inlet. But it had come at midday. And on its mast, round and of painted wood, had hung the white shield. His men had ": {
             "author": "John Norman",
             "title": "Marauders of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/kSYtXqs.png?1"
+        },
+        "Nightfall came, and the little company took shelter beneath an overhang along a ridgeline that shadowed the Silver River. There they had their dinner and watched the sullen rush of the river as it chu": {
+            "author": "Terry Brooks",
+            "title": "The Wishsong Of Shannara",
+            "cover": "https://i.imgur.com/nILkfS2.png?1"
         },
         "Too late. A wave caught the boat and flipped it over. The craft's occupants disappeared beneath the surface. Trout waited for their heads to appear. But he was distracted by a sharp rapping noise and ": {
             "author": "Clive Cussler, Paul Kemprecos",
             "title": "Serpent",
-            "cover": ""
+            "cover": "https://i.imgur.com/ZnhUSil.png?1"
+        },
+        "Oman had defied the Ottoman conquerors for a hundred years, and could do so for another hundred, if only it were led by a strong and resourceful man. Ibn Yaqub was not that man. He was past seventy ye": {
+            "author": "Wilbur Smith",
+            "title": "Monsoon",
+            "cover": "https://i.imgur.com/RTLi8QI.png?1"
         },
         "In a short while then I had returned to the room off the great hall where the trunk had been left. There I put the ankle rings on her, put her in the slave sack, tied it shut and placed it the trunk, ": {
             "author": "John Norman",
             "title": "Players of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/3qMoywB.png?1"
+        },
+        "The trouble was that he could not sleep. He lay there in the dark with an arm behind his head and the medallion's leather cord looped through itself on his wrist, ready to hand in case the gholam slid": {
+            "author": "Robert Jordan",
+            "title": "Winter's Heart",
+            "cover": "https://i.imgur.com/pki5X9N.png?1"
         },
         "Also, as she was, legally, having submitted in the House of Cernus, a slave girl, any small thing she had or could do which was her own was doubtless rather precious to her. Some slaves, I knew, were ": {
             "author": "John Norman",
             "title": "Assassin of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/KYVPePc.png?1"
+        },
+        "Don't be a silly little duck, he laughed at her. It will all be over before you know it, and I'll be back with a gold medal on my chest. Don't call me a silly little duck, she flashed at him, not ever": {
+            "author": "Wilbur Smith",
+            "title": "Power of the Sword",
+            "cover": "https://i.imgur.com/ThtfgL2.png?1"
+        },
+        "Fire leapt from the tip of his staff. Handles and bits of wire and pathetically spinning wheels tinkled down around him. And what made it even better was that there was no end to the targets. A second": {
+            "author": "Terry Pratchett",
+            "title": "Reaper Man",
+            "cover": "https://i.imgur.com/10SmKPP.png?1"
         },
         "She avoided him as much as she could, but Vivacia was not a large ship. From threats of murder and foul names, she had simmered to seething hatred and murderous looks. He had met all her stares with g": {
             "author": "Robin Hobb",
             "title": "Ship of Destiny",
-            "cover": ""
+            "cover": "https://i.imgur.com/xfRqrXo.png?1"
         },
         "Vasagi was the victim of an hereditary bone disease. The small handful of Wamphyri diseases were mainly hereditary: various animalisms, several forms of insanity, aggressive autisms, acromegaly and ot": {
             "author": "Brian Lumley",
             "title": "Vampire World 1: Blood Brothers",
-            "cover": ""
+            "cover": "https://i.imgur.com/UDHZIKU.png?1"
         },
         "Clad in mufti, so that his people might not recognise him, the king stole from the palace through an unguarded postern, accompanied by the piper. Night, like a formless monster with the crescent moon ": {
             "author": "Clark Ashton Smith",
             "title": "Xeethra",
-            "cover": ""
+            "cover": "https://i.imgur.com/vTZHDR1.png?1"
         },
         "Far below, in the streets, I heard the siren of a fire engine, and the other noises of the city night. I struggled, gagged and bound, silently, torturedly. At last I managed to get the knife to the fo": {
             "author": "John Norman",
             "title": "Captive of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/8DG8RV2.png?1"
+        },
+        "You should respect him. And Anna had looked at him calmly and asked, Why? which was a difficult question. But now she changed the subject. Do you want to eat yet? No, said Sean and reached for her. Sh": {
+            "author": "Wilbur Smith",
+            "title": "When the Lion Feeds",
+            "cover": "https://i.imgur.com/2cawnWQ.png?1"
         },
         "They broke up the links, sending each slave to a testing facility to see what skills might be saleable. Then each was assigned to new links, for work or training or both, clipped and unclipped from on": {
             "author": "Anne McCaffrey, Elizabeth Moon",
             "title": "Sassinak",
-            "cover": ""
+            "cover": "https://i.imgur.com/lNFE75Z.png?1"
         },
         "As Pitt walked through the debris field, clearing away small areas with the machete, he found relics of the crew but no bones. Most of them had been swept off the ship by the tidal wave. He spied pair": {
             "author": "Clive Cussler",
             "title": "Inca Gold",
-            "cover": ""
+            "cover": "https://i.imgur.com/aBYp3Ma.png?1"
+        },
+        "The sudden departure of several quintillion atoms from a universe that they had no right to be in anyway caused a wild imbalance in the harmony of the Sum Totality which it tried frantically to retrie": {
+            "author": "Terry Pratchett",
+            "title": "The Colour of Magic",
+            "cover": "https://i.imgur.com/tZlmUDU.png?1"
         },
         "The camisk, I am told, was at one time commonly belted with a chain. However, the camisks that I have personally seen, and those we were given, were belted with a long, thin strap of leather binding f": {
             "author": "John Norman",
             "title": "Captive of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/8DG8RV2.png?1"
+        },
+        "In its own way, the rest of the land lay as dead as the burns, though grass covered the ground and leaves covered the trees. Everything had that faded look, like clothes too often washed and too long ": {
+            "author": "Robert Jordan",
+            "title": "The Great Hunt",
+            "cover": "https://i.imgur.com/q8KXpWY.png?1"
+        },
+        "I reassure you as you sob, reduced to patting and uttering trite inanities by this unexpected intrusion. I look around at the dry mist of choking dust the shell's passage has bestowed upon us, while a": {
+            "author": "Iain Banks",
+            "title": "A Song of Stone",
+            "cover": "https://i.imgur.com/iJvFFuj.png?1"
         },
         "The tarns were now being unhooded and they leaped up, with a snap of their wings, to their perches, numbered and chosen by lot. Possession of the inside perch is regarded, of course, as an advantage. ": {
             "author": "John Norman",
             "title": "Assassin of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/KYVPePc.png?1"
+        },
+        "Merana stood behind the barrier she could neither see nor feel, head high and hands folded at her waist as if a shawl were looped over her arms. Aes Sedai to her toenails. She watched him and the clan": {
+            "author": "Robert Jordan",
+            "title": "A Crown of Swords",
+            "cover": "https://i.imgur.com/081O8LY.png?1"
         },
         "When he returned, it was at anything but a sedate pace. He ran across the lobby and whispered something urgently to the operator. She left her seat and only seconds later no less a personage than the ": {
             "author": "Alistair MacLean",
             "title": "The Way to Dusty Death",
-            "cover": ""
+            "cover": "https://i.imgur.com/0w5UF5y.png?1"
+        },
+        "The seeming inevitability of things did not escape her. The Ardsheal had failed her, just as all the other creatures she had sent had failed her. Under Rydall's agreement she had two monsters left to ": {
+            "author": "Terry Brooks",
+            "title": "Witches' Brew",
+            "cover": "https://i.imgur.com/lXtpGqb.png?1"
         },
         "Nick pointed up the trench and then swam away in that direction, following the tracks with fascination. He did not turn around to see if Carol were following. Carol quickly backtracked as close to the": {
             "author": "Arthur C. Clarke, Gentry Lee",
             "title": "Cradle",
-            "cover": ""
+            "cover": "https://i.imgur.com/CX8slWa.png?1"
         },
         "This particular evening, however, there was trouble in the air. A trio of civilian males were perched at the bar, and seemed to have their minds set on causing a disturbance. They were at that awkward": {
             "author": "Robert Asprin",
             "title": "Phule’s Company",
-            "cover": ""
+            "cover": "https://i.imgur.com/5MZhBJ0.png?1"
         },
         "Almost simultaneously, flaming bottles of fuel soared over and past the Grand Banks' bridge like a meteor shower and dropped onto the cabin and decks of the patrol boat, erupting in a roar of flames a": {
             "author": "Clive Cussler",
             "title": "Atlantis Found",
-            "cover": ""
+            "cover": "https://i.imgur.com/YKoReEI.png?1"
         },
         "He never ignored omens, good or bad. Judith's reappearance in his life was a sign that they belonged together, and it seemed that she, all unknowing, felt the same. Here was the woman for the love of ": {
             "author": "Clive Barker",
             "title": "Imajica",
-            "cover": ""
+            "cover": "https://i.imgur.com/dCF6VFm.png?1"
         },
         "He untied my ankles and I lay before him on the tiles. I wanted to tell him how much I loved him. I could not do so. I was gagged. Angrily he crouched down and, by an ankle, drew me to him, half under": {
             "author": "John Norman",
             "title": "Slave Girl of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/NSK38wl.png?1"
+        },
+        "Perrin's ears caught something else, too, through the stamping of horses' hooves and men's quiet, relieved laughter. A bluetit's trill sounded to the south, beyond the hearing of anyone else there, fo": {
+            "author": "Robert Jordan",
+            "title": "Crossroads Of Twilight",
+            "cover": "https://i.imgur.com/4uUPuSY.png?1"
+        },
+        "Then the rain came, plunging in a cold fusillade through the near naked branches of the broad leaved trees where only the first hints of bright buds broke the brown monotony of bark. I cursed Mother, ": {
+            "author": "Iain Banks",
+            "title": "A Song of Stone",
+            "cover": "https://i.imgur.com/iJvFFuj.png?1"
+        },
+        "Then they were helping her to her feet, hugging her and wiping away her tears, holding a handkerchief for her to finally blow her nose. The other women gathered around, each announcing that this woman": {
+            "author": "Robert Jordan",
+            "title": "Lord of Chaos",
+            "cover": "https://i.imgur.com/EQBVEhp.png?1"
+        },
+        "Feeling worse than useless, she picked up her skirts and ran, and Egwene's screams pursued her. She could not make herself stay, and leaving made her feel a coward. Half blind with weeping, she found ": {
+            "author": "Robert Jordan",
+            "title": "The Great Hunt",
+            "cover": "https://i.imgur.com/q8KXpWY.png?1"
         },
         "Similarly it was not one of those parties in which a given number of slaves must dance within a circle of free men, of equal number, with whips, stripping themselves to the strokes of the whips and th": {
             "author": "John Norman",
             "title": "Guardsman of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/xih596U.png?1"
+        },
+        "The amulet in his right hand seemed to take on some strange life of its own. Taita felt it pulse softly in rhythm to his own heartbeats. He opened his mind and let the currents of existence enter free": {
+            "author": "Wilbur Smith",
+            "title": "Warlock",
+            "cover": "https://i.imgur.com/kZoTVOJ.png?1"
         },
         "He had no way of knowing for certain where he was in Squonk's body, but the same sort of feel that had helped him in dead reckoning gave him the general feeling that he was in the body of Squonk, rath": {
             "author": "Gordon Dickson",
             "title": "Forever Man",
-            "cover": ""
+            "cover": "https://i.imgur.com/sTWsswe.png?1"
+        },
+        "They sat in silence then, waiting. Ben reached for Willow's hand and squeezed it gently. She smiled back at him. At the far end of the room, Parsnip appeared from out of the kitchen, gave a brief gree": {
+            "author": "Terry Brooks",
+            "title": "The Tangle Box",
+            "cover": "https://i.imgur.com/FimVuHE.png?1"
         },
         "Superficially, the procedure was simple. The five insurgent fleets went to planetary systems which were important because of location, population, industries, resources, or whatever the consideration ": {
             "author": "Poul Anderson",
             "title": "The Game of Empire",
-            "cover": ""
+            "cover": "https://i.imgur.com/OoACPMt.png?1"
         },
         "After naps they were supposed to stay in the social room till supper. Caleb, however, wandered out into the yard, and since he always went to the same place nobody tried to stop him. He sat on a bench": {
             "author": "Anne Tyler",
             "title": "Searching For Caleb",
-            "cover": ""
+            "cover": "https://i.imgur.com/WsaQoR3.png?1"
+        },
+        "Jon Lin's impatient voice cut through the momentary stillness with biting sharpness, and the lounging riders leaped to their feet hurriedly in response. He stared a final time at the distant blackness": {
+            "author": "Terry Brooks",
+            "title": "The Sword Of Shannara",
+            "cover": "https://i.imgur.com/kgbq0AY.png?1"
         },
         "It was a question that haunted her long after Duncan had fallen asleep. Sitting in the chair by the window, her legs curled beneath her, Marisa thought about Grigori. She had been drawn to him from th": {
             "author": "Amanda Ashley",
             "title": "After Sundown",
-            "cover": ""
+            "cover": "https://i.imgur.com/t7jLQVN.png?1"
         },
         "As he proceeded, weaving among trunks and girders and jointed rods with the ease of long practice, Zero paid most attention to his radio receptors. There was something strange in the upper communicati": {
             "author": "Poul Anderson",
             "title": "Time and Stars",
-            "cover": ""
+            "cover": "https://i.imgur.com/a7WdyyZ.png?1"
         },
         "The city had never been a simple place even during the years she'd lived in it; it was easy to get lost or distracted. How much more complicated would it be now, especially for someone like her poor T": {
             "author": "Clive Barker",
             "title": "Coldheart Canyon",
-            "cover": ""
+            "cover": "https://i.imgur.com/aFlpxnP.png?1"
         },
         "As he clung to the bars, his prison started to move toward the surface of the ship. The protective screen parted as they came to it, and closed behind them. Close up, the men looked puny. Their need o": {
             "author": "A. E. van Vogt",
             "title": "The Voyage of the Space Beagle",
-            "cover": ""
+            "cover": "https://i.imgur.com/PrSVkA4.png?1"
         },
         "Once when Dalgard had been very small he had raided his father's trip bag after the next to the last exploring journey the elder Nordis had made. And he had found a clear block of some kind of greenis": {
             "author": "Andre Norton",
             "title": "Star Born",
-            "cover": ""
+            "cover": "https://i.imgur.com/SERGhI5.png?1"
+        },
+        "His journey in took him more than an hour. He did not set a hurried pace, but walked slowly and easily across the flats that led in. There was no reason to rush, and should anyone be watching he did n": {
+            "author": "Terry Brooks",
+            "title": "The First King Of Shannara",
+            "cover": "https://i.imgur.com/J3hUKFi.png?1"
         },
         "The lower part of the stack where it stood mainly free of the canyon's wall was still in shadows, which gradually drew back as the moon rose higher still. Jazz was glad of that moon, for the sun was n": {
             "author": "Brian Lumley",
             "title": "Necroscope III: The Source",
-            "cover": ""
+            "cover": "https://i.imgur.com/9skgFoh.png?1"
         },
         "I was so stunned I could not move for a moment. I looked at the fine weaving of the linen sheets. For three nights and two days I had been in the crude stockade at the castle. And I had expected to sl": {
             "author": "Anne Rice",
             "title": "Beauty’s Punishment",
-            "cover": ""
+            "cover": "https://i.imgur.com/V7mpBTU.png?1"
         },
         "Perhaps the whip had been flung against me to remind me of my subjectability to it. Or perhaps he had flung it there that my master, or his man, might understand, when he came to unchain me, that at t": {
             "author": "John Norman",
             "title": "Dancer of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/v3Npbzx.jpg?1"
+        },
+        "He had long since taken to drawing on saidin through the angreal in his pocket, the stone carving of the fat little man. Even so, working the Power was a strain now, weaving it at this distance of mil": {
+            "author": "Robert Jordan",
+            "title": "The Fires of Heaven",
+            "cover": "https://i.imgur.com/flRQgLy.png?1"
         },
         "The chaining on the two slaves did not much restrict their movements, nor was it intended to. Like much chaining on Gor their chaining was primarily aesthetic and symbolic. On a world such as Gor chai": {
             "author": "John Norman",
             "title": "Guardsman of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/xih596U.png?1"
+        },
+        "Another cramp, this one not quite as terrible as the one which had set fire to her solar plexus, froze the muscles in her right thigh and set her right foot wagging foolishly in the air. She opened he": {
+            "author": "Stephen King",
+            "title": "Gerald's Game",
+            "cover": "https://i.imgur.com/I5nOIWl.png?1"
         },
         "That they were discussing me I had no doubts. Now that I was on my feet, the first giddiness had gone and I could think. Velos termed me dead, or near so, but at the moment I felt very much alive. And": {
             "author": "Andre Norton",
             "title": "The Zero Stone",
-            "cover": ""
+            "cover": "https://i.imgur.com/nk2rPGR.png?1"
         },
         "He was sitting at the near corner of the table so that, as it happened, no one but me could see him. I thought he wore an expression of astonishment at first, because his eyes were so wide. But just a": {
             "author": "Arthur Golden",
             "title": "Memoirs of a Geisha",
-            "cover": ""
+            "cover": "https://i.imgur.com/BK7Bcg2.jpg?1"
+        },
+        "They remained immobile after the departure of the Skull Bearer. Once again they had come close to death and managed to elude its fatal touch. They sat quietly and listened as the mingled sounds of ins": {
+            "author": "Terry Brooks",
+            "title": "The Sword Of Shannara",
+            "cover": "https://i.imgur.com/kgbq0AY.png?1"
         },
         "In a few moments I had hoisted myself up to the low roof and then, again, climbing, I eased myself onto the roof of the building in which the man and woman had been conversing. There was a ventilator ": {
             "author": "John Norman",
             "title": "Explorers of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/vbc4LAF.png?1"
+        },
+        "Centaine's head jerked as though the words were a blow in her face, and she stared at him while thoughts tumbled and crowded in her mind. Up to that moment she had been so wrapped up in listening and ": {
+            "author": "Wilbur Smith",
+            "title": "The Burning Shore",
+            "cover": "https://i.imgur.com/qmA8pEX.png?1"
         },
         "I have never been averse to the pleasures of the table, and have had the good fortune to partake of many excellent meals; but never do I recollect having supped with more pleasure than on this night. ": {
-            "author": "Charles Nordhoff and James Norman Hall",
+            "author": "Charles Nordhoff, James Norman Hall",
             "title": "Men Against the Sea",
-            "cover": ""
+            "cover": "https://i.imgur.com/Qb505Pe.png?1"
+        },
+        "He fell back into himself with a thud, exactly as one fell back into one's seat after taking a car over a bad bump at a high speed. To his horror, he realized he was still tracking the man below with ": {
+            "author": "Stephen King",
+            "title": "Dreamcatcher",
+            "cover": "https://i.imgur.com/0hMMBNv.png?1"
         },
         "The creature had leapt on to the top of his car. Its head was thrown back in a kind of ecstasy, its erection plainer than ever, the eye in its huge head glinting. With a final swoop to its voice, whic": {
             "author": "Clive Barker",
             "title": "Books of Blood Volume 2",
-            "cover": ""
+            "cover": "https://i.imgur.com/oAyc9nB.png?1"
+        },
+        "They went forward in single file. The walls of the cleft narrowed where the searchers walked, hemming them in. The warmth of the sun turned to dank, cool shadow, and the light faded. Soon overhangs an": {
+            "author": "Terry Brooks",
+            "title": "The First King Of Shannara",
+            "cover": "https://i.imgur.com/J3hUKFi.png?1"
+        },
+        "At present, they give much more comfort than they receive, and even Jack cannot explain why this should be so. The creatures surrounding him are not wasps, hummingbirds, or cats, but they are bees, ho": {
+            "author": "Stephen King, Peter Straub",
+            "title": "Black House",
+            "cover": "https://i.imgur.com/JuVPTOd.png?1"
         },
         "A haunting entity is sort of a misguided and confused psychic bloodhound. Although we may not see it, we leave a psychic impression wherever we have been. Our homes and work places hold the strongest ": {
             "author": "Marc Carlson",
@@ -2002,277 +2247,482 @@
         "I, Enoch, cardinal, write this unofficial memo to myself, well knowing that it cannot be made a part of the official record, since the incident I write of was not placed in the official record, purpos": {
             "author": "Clifford D. Simak",
             "title": "Project Pope",
-            "cover": ""
+            "cover": "https://i.imgur.com/JbWLH1H.png?1"
         },
         "A crumpled piece of plastic lay clutched in a spasmodically Frozen hand. Flinx pried it from his grasp, bending open the lifeless but still stubborn fingers. Above him lights began to come on as the c": {
             "author": "Alan Dean Foster",
             "title": "The Tar-aiym Krang",
-            "cover": ""
+            "cover": "https://i.imgur.com/OPy9ggB.png?1"
         },
         "The three men had time to leap to the far side, clinging to the nearest saplings and bushes, but the slide, once it started, picked up momentum in an awesome, inexorable cataract of moving mud, headin": {
             "author": "Anne McCaffrey",
             "title": "The Tower And The Hive",
-            "cover": ""
+            "cover": "https://i.imgur.com/qSLhuC5.png?1"
         },
         "He barely had time to compensate before the rocks were on him. He gave the control column a precisely measured jerk, just enough to raise the plane's nose, just enough so the tips of the propeller whi": {
             "author": "Clive Cussler",
             "title": "Shock Wave",
-            "cover": ""
+            "cover": "https://i.imgur.com/z3Z2cnz.png?1"
         },
         "The slaves obediently pressed their weight against the timber spokes of the two windlasses and they creaked and the chains tightened. Their naked feet slipped in the dirt and they pressed ever more ti": {
             "author": "John Norman",
             "title": "Priest-Kings of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/FmQ0S3M.png?1"
         },
         "Sempronius had been permitted earlier in the evening to feed the slave Tuka, as Callisthenes had Tela. Tuka had knelt before him, clad only in a slave strip and belt of rolled cloth, her wrists crosse": {
             "author": "John Norman",
             "title": "Dancer of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/v3Npbzx.jpg?1"
         },
         "Austin knew a race boat's hull was tougher than nails, but the rudders and the connecting tie bar were exposed. If the bar had been bent, the rudders could have been locked in place. Well, so what? Ev": {
             "author": "Clive Cussler",
             "title": "Blue Gold",
-            "cover": ""
+            "cover": "https://i.imgur.com/Okk6bI2.png?1"
         },
         "When he freed my hands of the strap I sank to my knees on the tiles under the ring. I was half in shock. I knew he had not struck me with his full strength and, indeed, I had been struck only five tim": {
             "author": "John Norman",
             "title": "Kajira of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/RoR9Hpw.png?1"
         },
         "The heads of certain war arrows and hunting arrows differ, too, at least in the case of certain warriors, in an interesting way, with respect to the orientation of the plane of the point to the plane ": {
             "author": "John Norman",
             "title": "Savages of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/IufILR4.png?1"
         },
         "Carol felt a surge of adrenaline as she reached for Nick's regulator and thrust it into his mouth. She beat against his mask with her fist. After a few painfully long seconds, Nick opened his eyes. Ca": {
             "author": "Arthur C. Clarke, Gentry Lee",
             "title": "Cradle",
-            "cover": ""
+            "cover": "https://i.imgur.com/CX8slWa.png?1"
         },
         "Soon a soft rustling became audible. Our boat was shearing its way through banks of reeds. A great silence succeeded to the song of the rowers, for Shaban had landed. He came back in a few moments, an": {
             "author": "Clark Ashton Smith",
             "title": "The Third Episode of Vathek",
-            "cover": ""
+            "cover": "https://i.imgur.com/BFKLKUD.png?1"
         },
         "That night, at a stream, we stopped early to camp. In the evening, the girls, under guard, attend to various tasks. They tend the bosk, clean the wagons, draw water and gather firewood. Sometimes they": {
             "author": "John Norman",
             "title": "Captive of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/8DG8RV2.png?1"
         },
         "Then he kicked George's jelly legs out from under him and went in search of the broken mattock head. A moment later and he returned, and still George squirmed and gagged and wrestled with the stake in": {
             "author": "Brian Lumley",
             "title": "Necroscope II: Wamphyri!",
-            "cover": ""
+            "cover": "https://i.imgur.com/r0q9GsB.png?1"
+        },
+        "Tanus' squadron was scattered widely across the lagoon, but now it began to regroup. I saw that some of the other galleys had suffered damage, as we had. Two ships had collided in the heat of the chas": {
+            "author": "Wilbur Smith",
+            "title": "River God",
+            "cover": "https://i.imgur.com/8hhk3rL.png?1"
+        },
+        "He had just stepped out from behind the tree when he saw, again out of the corner of his eye, the green bulk overhead in the gap. He moved back quickly, clung to the trunk, and peered around it. The c": {
+            "author": "Philip José Farmer",
+            "title": "Dayworld Rebel",
+            "cover": "https://i.imgur.com/hAQ2R25.png?1"
         },
         "It was late afternoon. Beauty lay on the cool grass with the other slaves, stirred only now and then by the prodding stick of one of the kitchen girls, who forced her legs apart roughly. Yes, she must": {
             "author": "Anne Rice",
             "title": "Beauty’s Punishment",
-            "cover": ""
+            "cover": "https://i.imgur.com/V7mpBTU.png?1"
         },
         "The jolly boat's oars stilled, as their way carried them past the cutter. Hornblower could see Soames standing up in the sternsheets looking at the death which was cleaving the blue water towards him.": {
             "author": "C.S. Forester",
             "title": "Mr. Midshipman Hornblower",
-            "cover": ""
+            "cover": "https://i.imgur.com/p0XCf2H.png?1"
         },
         "And these ones seek blue and purple knowledge. From all the universe they seek it. They trap all that may be thought or known. Not only blue and purple, but all spectra of knowing. They trap it on lon": {
             "author": "Clifford D. Simak",
             "title": "Destiny Doll",
-            "cover": ""
+            "cover": "https://i.imgur.com/CcoTcmq.png?1"
+        },
+        "They hiked into the pass as the sun dropped steadily toward the horizon and slipped from view. The skies remained clear and the air warm, so travel was comfortable and they made good time. By midnight": {
+            "author": "Terry Brooks",
+            "title": "The First King Of Shannara",
+            "cover": "https://i.imgur.com/J3hUKFi.png?1"
         },
         "Four seconds later, there was a splintering crash as the catamaran smashed through the hull of the yacht, followed by an explosion that filled the night sky with flame and flying debris. The black cat": {
             "author": "Clive Cussler",
             "title": "Flood Tide",
-            "cover": ""
+            "cover": "https://i.imgur.com/Kssiocj.png?1"
+        },
+        "Moments later they stood on the crest of the small rise that ran parallel with the north bank. The swift river had long since flooded its low banks and was continuing to rise. Menion had no idea where": {
+            "author": "Terry Brooks",
+            "title": "The Sword Of Shannara",
+            "cover": "https://i.imgur.com/kgbq0AY.png?1"
+        },
+        "Traveling was as difficult as it had been prior to the storm. The ground was hard and coated with rubble and loose topsoil that made the footing treacherous. Scrambling and clawing their way over the ": {
+            "author": "Terry Brooks",
+            "title": "The Sword Of Shannara",
+            "cover": "https://i.imgur.com/kgbq0AY.png?1"
+        },
+        "For a moment he imagined himself running from all those dogs yipping and growling through the cracks in their enclosure, and then he stood up. The sky seemed to tilt over his head, to darken. And back": {
+            "author": "Stephen King, Peter Straub",
+            "title": "The Talisman",
+            "cover": "https://i.imgur.com/QfZn418.png?1"
+        },
+        "Rand's heart pounded as he ran, and he stared in dismay at the barren hills surrounding him. This was not just a place where spring was late in coming; spring had never come here, and never would come": {
+            "author": "Robert Jordan",
+            "title": "The Eye Of The World",
+            "cover": "https://i.imgur.com/PKNirVW.png?1"
+        },
+        "It was the second evening when for the first time Perrin saw women dance to some of the slow songs. The fires burned low, and the night hung close around the wagons, and fingers tapped a slow rhythm o": {
+            "author": "Robert Jordan",
+            "title": "The Eye Of The World",
+            "cover": "https://i.imgur.com/PKNirVW.png?1"
         },
         "A jagged flash of purple lightning cracked across the heavens and both of them shielded their eyes as it struck not far from where they stood. The rumble of the thunder which followed almost split the": {
             "author": "Andre Norton",
             "title": "Darkness and Dawn",
-            "cover": ""
+            "cover": "https://i.imgur.com/6L2FfER.png?1"
         },
         "As he grew, however, it became clear that I had failed. My sperm, which I had tried by force of will to keep free of crimson influences, had been tainted, however lightly. It had been a foolish experi": {
             "author": "Brian Lumley",
             "title": "Necroscope IV: Deadspeak",
-            "cover": ""
+            "cover": "https://i.imgur.com/9ulqj1U.png?1"
         },
         "Mr. Humfries was a man of about fifty. He had very good manners, and the presence of a junior minister. He could, at any moment, be all things to all people. He could talk racing shop, cricket, foreig": {
             "author": "Agatha Christie",
             "title": "At Bertram's Hotel",
-            "cover": ""
+            "cover": "https://i.imgur.com/Rzu8f66.png?1"
         },
         "Nevertheless, it seems to him, as he passes their dark lair, that they know who he is and judge him accordingly. He cannot help himself, for they have been witness to his every failure. It feels as if": {
             "author": "Terry Brooks",
-            "title": "Running With The Demon",
-            "cover": ""
+            "title": "Running with the Demon",
+            "cover": "https://i.imgur.com/A8Dn0Cs.png?1"
+        },
+        "My father, not unreasonably, was very annoyed. Not only had his car been damaged, but he considered himself very lucky not to have been involved in a nasty accident through no fault of his own. He had": {
+            "author": "John Wyndham",
+            "title": "Stowaway to Mars",
+            "cover": "https://i.imgur.com/h6tn5ft.png?1"
         },
         "Malta jerked her head aside to avoid a kick. It glanced off her skull, dazing her for an instant. It was not deliberate. Now that they had the Satrap, no one was interested in her anymore. She saw him": {
             "author": "Robin Hobb",
             "title": "Ship of Destiny",
-            "cover": ""
+            "cover": "https://i.imgur.com/xfRqrXo.png?1"
+        },
+        "Language was no barrier, and Raleigh had the additional advantage of being placed in charge of his father's business interest in the area, and therefore was accorded almost immediate recognition and r": {
+            "author": "Wilbur Smith",
+            "title": "Rage",
+            "cover": "https://i.imgur.com/xkFjfvg.png?1"
+        },
+        "Looking fixedly at this snapshot, Tansy reaches for her glass of coffee brandy and takes a small sip. And suddenly, from nowhere (or the place from which all our more ominous and unconnected thoughts ": {
+            "author": "Stephen King, Peter Straub",
+            "title": "Black House",
+            "cover": "https://i.imgur.com/JuVPTOd.png?1"
         },
         "It could be perhaps mentioned that such work, cooking, cleaning and laundering, and such, is commonly regarded as being beneath even free women, particularly those of high castes. In the high cylinder": {
             "author": "John Norman",
             "title": "Captive of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/8DG8RV2.png?1"
+        },
+        "A black shape flew slowly across the silvery ball of the moon. Rand's involuntary jerk on the reins halted the gray. A bat, he thought weakly, but he knew it was not. Bats were a common sight of an ev": {
+            "author": "Robert Jordan",
+            "title": "The Eye Of The World",
+            "cover": "https://i.imgur.com/PKNirVW.png?1"
         },
         "What we discovered, Master, all of us, in the dungeons and training rooms of the House of Andronicus, was that we were natural slaves. There our slavery had been, by such devices as brands and collars": {
             "author": "John Norman",
             "title": "Rogue of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/Z3asz9W.png?1"
         },
         "But of those few chances the great majority went to the senior lieutenant, to the first lieutenant; the chances of the junior lieutenant were doubly few. So that whenever a lieutenant dreamed of attai": {
             "author": "C.S. Forester",
             "title": "Lieutenant Hornblower",
-            "cover": ""
+            "cover": "https://i.imgur.com/YcM7645.png?1"
+        },
+        "Weapons flew past from every direction, and the screams of the wounded and dying filled the gray afternoon. They were in the center of the courtyard now, the castle wall rising up before them. Then a ": {
+            "author": "Terry Brooks",
+            "title": "The Wishsong Of Shannara",
+            "cover": "https://i.imgur.com/nILkfS2.png?1"
         },
         "Roughly Gorm unknotted the coffle rope from her neck. He then gestured that she, kneeling, should lift her fettered wrists to him; she did so; he, with a key from his belt, opened the fetters which he": {
             "author": "John Norman",
             "title": "Marauders of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/kSYtXqs.png?1"
+        },
+        "It's a secret. You have to swear an oath not to tell anybody, especially not my brother. All right, I swear. You have to do it properly. Lift your right hand and put the other on your heart. Solemnly ": {
+            "author": "Wilbur Smith",
+            "title": "Power of the Sword",
+            "cover": "https://i.imgur.com/ThtfgL2.png?1"
+        },
+        "It was nearing sunset when they passed at last from the gloom of the wilderness forest into the town of Grimpen Ward. A less inviting community would have been hard to imagine. Set down within a hollo": {
+            "author": "Terry Brooks",
+            "title": "The Elfstones Of Shannara",
+            "cover": "https://i.imgur.com/fURArYE.png?1"
         },
         "I said just now that there was nothing exciting about lunar exploration, but of course that isn't true. One could never grow tired of those incredible mountains, so much more rugged than the gentle hi": {
             "author": "Arthur C. Clarke",
             "title": "The Sentinel",
-            "cover": ""
+            "cover": "https://i.imgur.com/2gEUSVJ.png?1"
         },
         "As he leaned back in the seat he remembered the face of the lurching husband, the sharp pain of his big hand coming down on Cheelo's arm. He did not even recall pulling the trigger. Then the man colla": {
             "author": "Alan Dean Foster",
             "title": "Phylogenesis",
-            "cover": ""
+            "cover": "https://i.imgur.com/ZTlb8Ky.png?1"
+        },
+        "We pass the two killed sentries a minute later. They were in a little covered trench some way off the path, uphill in the trees. They have been dragged out of their nest, loose and slack and left toge": {
+            "author": "Iain Banks",
+            "title": "A Song of Stone",
+            "cover": "https://i.imgur.com/iJvFFuj.png?1"
+        },
+        "Nicholas proceeded with the utmost caution, probing the roof of the tunnel for weakness as he went. When he reached the landing he saw at once that the rock fall had smashed down what remained of the ": {
+            "author": "Wilbur Smith",
+            "title": "The Seventh Scroll",
+            "cover": "https://i.imgur.com/XTuApWw.png?1"
+        },
+        "The smooth pebble in Mat's mouth was not making moisture anymore, and had not been for some time. Spitting it out, he squatted beside Rand and stared at the billowing gray wall maybe thirty paces in f": {
+            "author": "Robert Jordan",
+            "title": "The Shadow Rising",
+            "cover": "https://i.imgur.com/eQMILem.png?1"
         },
         "At first it was thought that the holy man would not keep his vow quite literally, and would suffer himself to be comforted; but such was not the case. On reaching his own house, he began by stopping h": {
             "author": "Clark Ashton Smith",
             "title": "The Third Episode of Vathek",
-            "cover": ""
+            "cover": "https://i.imgur.com/BFKLKUD.png?1"
         },
         "We come to understand the thought of Albert Camus only after we have probed the full significance of his optimism about and his pessimism about human destiny. For this throws us back to the abiding ev": {
             "author": "Thomas L. Hanna",
             "title": "Albert Camus and the Christian Faith",
-            "cover": ""
+            "cover": "https://i.imgur.com/OdtNVol.png?1"
         },
         "Everything was real, every building, every street was exactly where it should be, precisely where he had been told it would be, but Reynolds could not shake off the growing feeling of unreality, of il": {
             "author": "Alistair MacLean",
             "title": "The Last Frontier",
-            "cover": ""
+            "cover": "https://i.imgur.com/fPuL100.png?1"
         },
         "The holos showed exactly what Hank had reported. A series of caves. Caves that looked to have been actually cut into the bluffs beside the ruined building. The nearest were completely dug up, and plai": {
-            "author": "Anne McCaffrey",
+            "author": "Anne McCaffrey, Mercedes Lackey",
             "title": "The Ship Who Searched",
-            "cover": ""
+            "cover": "https://i.imgur.com/0HFlWI2.png?1"
+        },
+        "Stripping off his clothes, he climbed into the coverings with her, arranging his own damp garments on the outside; they could help hold in the body heat. His sense of touch, enhanced by the Void and s": {
+            "author": "Robert Jordan",
+            "title": "The Fires of Heaven",
+            "cover": "https://i.imgur.com/flRQgLy.png?1"
+        },
+        "Aunt Cord was in the kitchen window as Susan walked her gift (which was really just returned property, in her view) to the stable. She called out something passing cheery about how the horse was a goo": {
+            "author": "Stephen King",
+            "title": "The Dark Tower IV: Wizard and Glass",
+            "cover": "https://i.imgur.com/Jv3kF1y.png?1"
         },
         "It is common to run a neck chain to the ankles in front of a woman's body, rather than behind it. In this fashion any stress on the chain is borne by the back of her neck rather than her throat. It is": {
             "author": "John Norman",
             "title": "Kajira of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/RoR9Hpw.png?1"
+        },
+        "The noise of people shouting for horse handlers to bring their teams, and others demanding at the top of their lungs to know what was happening, was beginning to fill the camp. Adria, a slim woman hol": {
+            "author": "Robert Jordan",
+            "title": "Crossroads Of Twilight",
+            "cover": "https://i.imgur.com/4uUPuSY.png?1"
+        },
+        "For nearly eight hours the valiant defenders of Tyrsis repelled an enemy twenty times its size. Scaling ladders and grappling hooks were methodically shattered and cut apart, Northlanders were pushed ": {
+            "author": "Terry Brooks",
+            "title": "The Sword Of Shannara",
+            "cover": "https://i.imgur.com/kgbq0AY.png?1"
         },
         "Muller tried to raise the flag and was astonished to find how easily it came up. It was a square of reddish marble, the same with which the entire floor of the church was tiled. This flag was very thi": {
             "author": "Auguste Groner",
             "title": "The Case of the Pool of Blood in the Pastor's Study",
-            "cover": ""
+            "cover": "https://i.imgur.com/oHFUmsG.png?1"
+        },
+        "The three of them sat at the top of the hill for some unknown length of time, Bill and Rosie together with their arms around each other's waist, Dorcas a little off to one side, near to where the pony": {
+            "author": "Stephen King",
+            "title": "Rose Madder",
+            "cover": "https://i.imgur.com/XCcN8tu.png?1"
+        },
+        "Each item requested would be encoded with the geographic region for which information was available, the specifics of the information required, the date it was needed, and the offered price. Any agent": {
+            "author": "Robert Asprin",
+            "title": "The Cold Cash War",
+            "cover": "https://i.imgur.com/Pqr1jWQ.png?1"
+        },
+        "Still, coming to a fold in the hills where the forest makes a shallow V, we come upon a pool and a whole flock of little sipping birds; some type of finch, I believe. The lieutenant urges us to be rea": {
+            "author": "Iain Banks",
+            "title": "A Song of Stone",
+            "cover": "https://i.imgur.com/iJvFFuj.png?1"
         },
         "It was now ten days since I had first put a gag on her for purposes of trekking. She seldom wore it, of course, in our camps. I was considering removing it, even for trekking. As I have suggested, she": {
             "author": "John Norman",
             "title": "Vagabonds of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/CUKLUpe.png?1"
         },
         "The key scraped harshly in the lock, the door crashed open and bounced off the bulkhead and a thug I'd never seen before, built along the same lines as Cibatti, jumped into the room. Hollywood had tau": {
             "author": "Alistair MacLean",
             "title": "Fear is the Key",
-            "cover": ""
+            "cover": "https://i.imgur.com/hOoAT9i.png?1"
+        },
+        "The two quickly reached the inn. It was a large structure consisting of a main building and lounging porch, with two long wings that extended out and back on either side. It was constructed of huge lo": {
+            "author": "Terry Brooks",
+            "title": "The Sword Of Shannara",
+            "cover": "https://i.imgur.com/kgbq0AY.png?1"
         },
         "At first, he kept slightly ahead of the flow of victims, but he soon struggled furiously to keep pace. Desperation was replaced with sheer anger as he saved a little boy no more than four years old. H": {
             "author": "Clive Cussler",
             "title": "Flood Tide",
-            "cover": ""
+            "cover": "https://i.imgur.com/Kssiocj.png?1"
         },
         "She smiled when he was done and said she wanted to go someday. She talked about what it was like to run a coffee shop, her own business, built from scratch. She told him what it was like growing up in": {
             "author": "Terry Brooks",
-            "title": "Running With The Demon",
-            "cover": ""
+            "title": "Running with the Demon",
+            "cover": "https://i.imgur.com/A8Dn0Cs.png?1"
+        },
+        "Warned by a sixth sense, by instincts honed to a fine edge, he looked up just as it dropped from its hiding place in a stone niche in the stairwell wall. He flung himself aside, and it thudded to the ": {
+            "author": "Terry Brooks",
+            "title": "The First King Of Shannara",
+            "cover": "https://i.imgur.com/J3hUKFi.png?1"
+        },
+        "After that, they taught each other. She taught him that books were sometimes just to be read and discarded, not studied (he was something of a grind, which amused Jan, and her amusement first exaspera": {
+            "author": "Stephen King",
+            "title": "The Long Walk",
+            "cover": "https://i.imgur.com/nC6HwlI.png?1"
         },
         "To Sorka's utter delight, school on Pern concentrated on adapting the students to their new home. Everyone was given safety instruction about common tools, and those over fourteen were taught how to o": {
             "author": "Anne McCaffrey",
             "title": "Dragonsdawn",
-            "cover": ""
+            "cover": "https://i.imgur.com/kbO4WOC.png?1"
         },
         "Joseph Muller, the bloodhound of the Austrian police, had found a clue, a clue that soon would bring him to the trail he was seeking. He did not know yet what he could do with his clue. But this much ": {
             "author": "Auguste Groner",
             "title": "The Case of the Pool of Blood in the Pastor's Study",
-            "cover": ""
+            "cover": "https://i.imgur.com/oHFUmsG.png?1"
+        },
+        "This was no theft of his own choosing, but rather was at the behest of the merchant Baratses, a purveyor of spices from the most distant realms of the world. Ten pieces of gold the spice dealer had of": {
+            "author": "Robert Jordan",
+            "title": "Conan the Magnificent",
+            "cover": "https://i.imgur.com/UWgUUzC.png?1"
         },
         "Labienus, in my opinion, was a fine, responsible, trustworthy officer. His faults in command, as I saw them, however, had been several. He had been too inflexible in his adherence to orders; he had ha": {
             "author": "John Norman",
             "title": "Vagabonds of Gor",
-            "cover": ""
+            "cover": "https://i.imgur.com/CUKLUpe.png?1"
+        },
+        "Most of those who escaped death on the mountainside had managed to withdraw through the trees that remained standing. With amazingly good order considering, Bashere claimed, yet they were unlikely to ": {
+            "author": "Robert Jordan",
+            "title": "The Path Of Daggers",
+            "cover": "https://i.imgur.com/BSfN3VY.png?1"
         },
         "For example, a searcher looked around, inquired discreetly around, after people who seemed to have whatever kind of unusualness was logical for a traveler residing in the given milieu. A shaman, villa": {
             "author": "Poul Anderson",
             "title": "There Will Be Time",
-            "cover": ""
+            "cover": "https://i.imgur.com/pcWwVQy.png?1"
+        },
+        "They had rested only once, a brief stop for water and relief from rapidly cramping muscles, then remounted and gone on. By the time they reached the river's edge, both horse and riders were close to e": {
+            "author": "Terry Brooks",
+            "title": "The Elfstones Of Shannara",
+            "cover": "https://i.imgur.com/fURArYE.png?1"
         },
         "Moment by moment she felt better. She'd suspected that something was going on, and she'd been right. She'd felt in danger, and she'd been right. And now she was helplessly locked into an evac pod, whi": {
             "author": "Anne McCaffrey, Elizabeth Moon",
             "title": "Sassinak",
-            "cover": ""
+            "cover": "https://i.imgur.com/lNFE75Z.png?1"
+        },
+        "Pa, he whispered. I don't want to go. I don't want to leave you. I don't want to be without you. Lothar made an impatient gesture, hardening his features to hide this softness in him. You will do as I": {
+            "author": "Wilbur Smith",
+            "title": "Power of the Sword",
+            "cover": "https://i.imgur.com/ThtfgL2.png?1"
+        },
+        "By nightfall, he was exhausted, having traveled far and rested little. He had given little thought to Grianne, taking for granted her compliance with the hard pace he had set, forgetting entirely that": {
+            "author": "Terry Brooks",
+            "title": "Morgawr",
+            "cover": "https://i.imgur.com/mswQoO3.png?1"
         },
         "Shotgun in hand, she exited the closet and moved back through the house. She stopped off in Nest's room long enough to scribble a few words on a piece of notebook paper, which she then tucked under he": {
             "author": "Terry Brooks",
             "title": "Running with the Demon",
-            "cover": ""
+            "cover": "https://i.imgur.com/A8Dn0Cs.png?1"
+        },
+        "They journeyed until it was almost dawn. By then they were well away from Sterling Silver and closing on the lake country. Some miles short of the Irrylyn they turned into a heavy grove of ash and hic": {
+            "author": "Terry Brooks",
+            "title": "Witches' Brew",
+            "cover": "https://i.imgur.com/lXtpGqb.png?1"
         },
         "The physical world about him had completely disappeared. He was conscious of only the black foulness before him, the veil from which stared the twin pools of lambent horror, the eyes of the Dweller! A": {
             "author": "Sterling E. Lanier",
             "title": "Hiero’s Journey",
-            "cover": ""
+            "cover": "https://i.imgur.com/Ex0bQtQ.png?1"
         },
         "He stayed there a long while, and the wind conspired with the desert to bury him. But he was not disappointed with the fruit of his vigil. For one day (or year), he saw a man come to the place and dro": {
             "author": "Clive Barker",
             "title": "Books of Blood Volume 5",
-            "cover": ""
+            "cover": "https://i.imgur.com/CNpYFRy.png?1"
         },
         "I would surely have gone overboard had not one of the sailors rolled me under the lea of one of the overturned dories and, bundled in blankets as I already was, roped me to the ship's rails. Indeed, s": {
             "author": "Antony Swithin, Mark Sebanc",
             "title": "Princes of Sandastre",
-            "cover": ""
+            "cover": "https://i.imgur.com/DkB6YGP.png?1"
         },
         "Kirkasant was probably the best of a bad lot. And Laure thought it was rather a miracle that man had survived there. So small a genetic pool, so hostile an environment... but the latter might well hav": {
             "author": "Poul Anderson",
             "title": "The Long Night",
-            "cover": ""
+            "cover": "https://i.imgur.com/74Sy6xB.png?1"
         },
         "In growing fear, Giordino frantically paddled the skiff toward the shattered wreckage. Reaching the outer perimeter of the burning debris, he strapped on his air tank and rolled into the canal. Lit by": {
             "author": "Clive Cussler",
             "title": "Flood Tide",
-            "cover": ""
+            "cover": "https://i.imgur.com/Kssiocj.png?1"
         },
         "For about four months I saw her two or three evenings a week, for an hour or so at a time. But never outside the apartment house in which we lived. We never went dancing; we never went to a concert; w": {
             "author": "J.D. Salinger",
             "title": "A Girl I Knew",
-            "cover": ""
+            "cover": "https://i.imgur.com/7kb1Exl.png?1"
+        },
+        "The wagon carried all his possessions, and there were precious few of these. Twelve years following a grandiose dream had wasted his substance all away. The considerable royalties from the book that h": {
+            "author": "Wilbur Smith",
+            "title": "Men of Men",
+            "cover": "https://i.imgur.com/zX2G3sS.png?1"
+        },
+        "He drove slowly down the entranceway toward the van, looking around, trying to take in everything at once. There were two picnic tables with a family at each one. One group was just clearing up and ge": {
+            "author": "Stephen King",
+            "title": "Firestarter",
+            "cover": "https://i.imgur.com/iurhlEr.png?1"
         },
         "When you examine the continents more closely, you find there are, crudely speaking, two kinds of regions. One shows the spectrum of ordinary rocks and minerals as found on many worlds. The other revea": {
             "author": "Carl Sagan",
             "title": "Pale Blue Dot",
-            "cover": ""
+            "cover": "https://i.imgur.com/5WFvAvp.png?1"
+        },
+        "Jerle Shannara did. He brought up his sword, the talisman he had carried to this confrontation, the magic he did not know how to use, and he advanced to do battle. As he did so, a flash of light dance": {
+            "author": "Terry Brooks",
+            "title": "The First King Of Shannara",
+            "cover": "https://i.imgur.com/J3hUKFi.png?1"
+        },
+        "A soft night breeze stirred across the small town of Eianrod, then faded. Sitting on the stone rail of the wide flat bridge in the heart of the town, Rand supposed the breeze was hot, yet it hardly fe": {
+            "author": "Robert Jordan",
+            "title": "The Fires of Heaven",
+            "cover": "https://i.imgur.com/flRQgLy.png?1"
+        },
+        "The part she had cast herself for was that of a young man and an equal, and she did her best to play it. But her intention to treat all the five men with complete impartiality was defeated by Dale and": {
+            "author": "John Wyndham",
+            "title": "Stowaway to Mars",
+            "cover": "https://i.imgur.com/h6tn5ft.png?1"
         },
         "The feet of anirnals, if not of men, had continued the path they were following, and had made an easy way into the wood of fabulous evil. The drooping boughs enfolded them with arms of soft verdure, a": {
             "author": "Clark Ashton Smith",
             "title": "The Satyr",
-            "cover": ""
+            "cover": "https://i.imgur.com/m7mIBF3.png?1"
         },
         "He swallowed, his eyes threatening to mist up. In a matter of a few weeks a strong relationship had built up between them. His divorce had come through in the spring and left a bitterness which he was": {
             "author": "Guy N. Smith",
             "title": "Crab's Moon",
-            "cover": ""
+            "cover": "https://i.imgur.com/vq62jQo.png?1"
         },
         "She did not want to think. Not now. Now she just wanted to take what she could get, for herself. She ran her hands over the hard muscles of his arms and back. In the center of his chest was a thick pa": {
             "author": "Robin Hobb",
             "title": "Ship of Magic",
-            "cover": ""
+            "cover": "https://i.imgur.com/T5NLmwg.png?1"
+        },
+        "The waiting was monotonous, and Lothar chafed at being tied to the earphones of the telegraph tap but he could not afford to miss the vital message when it was flashed from the H'ani Mine, the message": {
+            "author": "Wilbur Smith",
+            "title": "Power of the Sword",
+            "cover": "https://i.imgur.com/ThtfgL2.png?1"
         },
         "He increased his pace, trusting to the dog to smell out ambushes ahead. In a flood of tense excitement Balthus forgot his hunger and weariness. The yells grew louder as they advanced, and above the de": {
             "author": "Robert E. Howard",
             "title": "Beyond the Black River",
-            "cover": ""
+            "cover": "https://i.imgur.com/otwOGLz.png?1"
+        },
+        "Inside, Perrin stared at the people. The men and women at the tables were all dressed in their feastday clothes, it seemed to him, with more embroidered coats, more lace on dresses, more colored ribbo": {
+            "author": "Robert Jordan",
+            "title": "The Dragon Reborn",
+            "cover": "https://i.imgur.com/uADUtvu.png?1"
         }
     };
 
