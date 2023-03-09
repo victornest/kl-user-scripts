@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name           KG_PereborChallengeIndicator
-// @version        1.4.0
+// @version        2.0.0
 // @namespace      klavogonki
 // @author         vnest
 // @description    Индикатор выполненной за сутки нормы 90/95% от рекорда (или поставленного рекорда) у игроков во время заезда
 // @include        http*://klavogonki.ru/g/*
+// @include        http*://klavogonki.ru/gamelist/
+// @include        http*://klavogonki.ru/
 // @grant          none
 // ==/UserScript==
 
@@ -86,6 +88,9 @@
     // Установите false вместо true, чтобы отключить попытки загузки такой статистики, и всегда показывать только базовый индикатор в виде одной звездочки
     let enableDetailedStats = true;
 
+    // Настройка включает отображение индикаторов в закрепленных виджетах из списка игр на главной странице и странице заездов (список включается с помощью скрипта из KlavoTools)
+    let enableGameListIndicators = true;
+
     ///////////////////////////////////////////////////////////////////////////////
     // Конец настроек
     ///////////////////////////////////////////////////////////////////////////////
@@ -96,6 +101,7 @@
     const settingStraightDaysColors = `${localStorageName}.straightDaysColors`;
     const settingGameTypes = `${localStorageName}.gameTypes`;
     const settingEnableDetailedStats = `${localStorageName}.enableDetailedStats`;
+    const settingEnableGameListIndicators = `${localStorageName}.enableGameListIndicators`;
 
     function processSetting(settingName, setting, isJson) {
         if (overrideSettings) {
@@ -116,6 +122,7 @@
     straightDaysColors = processSetting(settingStraightDaysColors, straightDaysColors, true);
     gameTypes = processSetting(settingGameTypes, gameTypes, true);
     enableDetailedStats = processSetting(settingEnableDetailedStats, enableDetailedStats, false);
+    enableGameListIndicators = processSetting(settingEnableGameListIndicators, enableGameListIndicators, false);
 
     let bestSpeedByUser = {};
     let gameType;
@@ -336,6 +343,8 @@
 
         let userStatsToday = userDayStats.list[0];
         let userMaxSpeedToday = userStatsToday.max_speed;
+
+        logDebug('userMaxSpeedToday', userMaxSpeedToday);
 
         for (let keyColor of Object.keys(targetSpeeds)) {
             let targetSpeedItem = targetSpeeds[keyColor];
@@ -572,6 +581,12 @@
         ratingObserver.observe(ratingElement, ratingObserverConfig);
     }
 
+    function getUserId() {
+        var userBlock = document.getElementsByClassName('user-block')[0];
+        if (!userBlock) return 0;
+        return userBlock.getElementsByClassName('btn')[0].href.split('/').slice(-2)[0];
+    }
+
     const playersCallback = async function (mutationsList, _) {
         for (let mutation of mutationsList) {
 
@@ -657,6 +672,54 @@
 
     let searchParams = new URLSearchParams(window.location.search);
     if (!searchParams.has("gmid")) {
+        
+        if(enableGameListIndicators) {
+
+            let userId = getUserId();
+            logDebug('userId', userId);
+            let recentGames = getRecentGames();
+            logDebug('recentGames', recentGames);
+            for (let recentGame of recentGames) {
+
+                if(!recentGame.pin) {
+                    continue;
+                }
+
+                let pinGameType = recentGame.params.gametype;
+
+                if(pinGameType == 'voc') {
+                    pinGameType = `voc-${recentGame.params.vocId}`;
+                }
+
+                logDebug('pinGameType', pinGameType);
+
+                let maxSpeed = await getUserGameTypeMaxSpeedAsync(userId, pinGameType);
+                logDebug('maxSpeed', maxSpeed);
+
+                let userDayStats = await httpGet(location.protocol + '//klavogonki.ru/api/profile/get-stats-details-data?userId=' + userId + '&gametype=' + pinGameType + '&fromDate=' + today + '&toDate=' + today + '&grouping=day');
+
+                logDebug('userDayStats', userDayStats);
+
+                if (!userDayStats.list) {
+                    logDebug('statistics is closed for user ' + userId);
+                    continue;
+                }
+        
+                if (userDayStats.list.length === 0) {
+                    continue;
+                }
+
+                let pinGameElement = document.querySelector(`#recent-game-${recentGame.id}`);
+
+                let indicatorParentElementHtml = document.createElement('div');
+                indicatorParentElementHtml.setAttribute('class', 'perebor-indicator-parent');
+                indicatorParentElementHtml.setAttribute('style', 'text-align: center; position: absolute; width: 100%;');
+
+                pinGameElement.prepend(indicatorParentElementHtml);
+
+                await processRegularUserStat(userId, maxSpeed, indicatorParentElementHtml, userDayStats);
+            }
+        }
         return;
     }
 
