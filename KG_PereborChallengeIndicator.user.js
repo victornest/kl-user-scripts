@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           KG_PereborChallengeIndicator
-// @version        2.0.0
+// @version        2.1.0
 // @namespace      klavogonki
 // @author         vnest
 // @description    Индикатор выполненной за сутки нормы 90/95% от рекорда (или поставленного рекорда) у игроков во время заезда
@@ -696,6 +696,16 @@
                 let maxSpeed = await getUserGameTypeMaxSpeedAsync(userId, pinGameType);
                 logDebug('maxSpeed', maxSpeed);
 
+                let pinGameElement = document.querySelector(`#recent-game-${recentGame.id}`);
+
+                let speedIndicatorParentElementHtml = document.createElement('div');
+                speedIndicatorParentElementHtml.setAttribute('class', 'perebor-speed-indicator-parent');
+                speedIndicatorParentElementHtml.setAttribute('style', 'position: absolute; bottom: -1px;right: 0;font-size:  8px;font-weight: bold;');
+                pinGameElement.prepend(speedIndicatorParentElementHtml);
+
+                let bestSpeedIndicator = '<span class="perebor-speed" style="color: red;">' + maxSpeed +'<span>';
+                speedIndicatorParentElementHtml.insert(bestSpeedIndicator);
+
                 let userDayStats = await httpGet(location.protocol + '//klavogonki.ru/api/profile/get-stats-details-data?userId=' + userId + '&gametype=' + pinGameType + '&fromDate=' + today + '&toDate=' + today + '&grouping=day');
 
                 logDebug('userDayStats', userDayStats);
@@ -708,8 +718,6 @@
                 if (userDayStats.list.length === 0) {
                     continue;
                 }
-
-                let pinGameElement = document.querySelector(`#recent-game-${recentGame.id}`);
 
                 let indicatorParentElementHtml = document.createElement('div');
                 indicatorParentElementHtml.setAttribute('class', 'perebor-indicator-parent');
