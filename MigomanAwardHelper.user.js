@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          MigomanAwardHelper.user
 // @namespace     klavogonki
-// @version       0.0.1
+// @version       0.0.2
 // @description   рассылает призовые очки и картинки
 // @include       http://klavogonki.ru/u/*
 // @author        vnest
@@ -11,6 +11,13 @@
     'use strict';
 
 	var input;
+	var outputJournalSuccess;
+	var outputJournalError;
+	var outputMessagesSuccess;
+	var outputMessagesError;
+
+	var scoreAwardCount;
+	var journalAwardCount;
 
     function getLogMessage(message) {
         return "MigomanAwardHelper: " + message;
@@ -112,12 +119,14 @@
 		logDebug('received respons 2', result);
 		if(result['err']) {
 			logError(`ERROR sending ${amount} points to user ${userId}`, result);
+			return false;
 		} else {
 			logMessage(`Sent OK ${amount} points to user ${userId}`);
+			return true;
 		}
     }
 
-	async function sendJournalMessageAsync(userId, message) {
+	async function sendJournalMessageAsync(userId, message, awardIndex) {
         let url = location.protocol + '//klavogonki.ru/api/profile/add-journal-post';
 
         let result = JSON.parse(await httpPost(url, {
@@ -127,13 +136,28 @@
 		logDebug('received respons 2', result['err']);
 		if(result['err']) {
 			logError(`ERROR sending journal message to user ${userId}`, result);
+			return false;
 		} else {
 			logMessage(`Sent OK journal message to user ${userId}`);
+			return true;
 		}
     }
 
 	async function ProcessAwardsAsync(sendPoints, sendJournalMessages)  {
 		var userRewardsParsed = JSON.parse(input.value);
+		var allRewards = userRewardsParsed.map(urp => urp.rewards).reduce((a, b) => a.concat(b));
+		var scoreRewards = allRewards.filter(r => r.privateMessage);
+		var journalRewards = allRewards.filter(r => r.journalMessage);
+
+		scoreAwardCount = scoreRewards.length;
+		journalAwardCount = journalRewards.length;
+
+		var scoreAwardSuccessIndex = 0;
+		var journalAwardSucessIndex = 0;
+
+		var scoreAwardErrorIndex = 0;
+		var journalAwardErrorIndex = 0;
+
 		for (let userRewardsInfo of userRewardsParsed) {
 			let userId = userRewardsInfo.userId;
 			let userRewards = userRewardsInfo.rewards;
@@ -143,13 +167,30 @@
 				let journalMessage = userReward.journalMessage;
 
 				if(sendPoints) {
-					await sendPointsAsync(userId, amount, privateMessage);
+					if (await sendPointsAsync(userId, amount, privateMessage)) {
+						scoreAwardSuccessIndex++;
+					} else {
+						scoreAwardErrorIndex++;
+					}
 				}
 				if(sendJournalMessages && journalMessage) {
-					await sendJournalMessageAsync(userId, journalMessage);
+					if (await sendJournalMessageAsync(userId, journalMessage)) {
+						journalAwardSucessIndex++;
+					} else {
+						journalAwardErrorIndex++;
+					}
 				}
+
+				updateOutputValue(outputJournalSuccess, journalAwardSucessIndex, journalAwardCount, false, true);
+				updateOutputValue(outputJournalError, journalAwardErrorIndex, journalAwardCount, false, false);
+				updateOutputValue(outputMessagesSuccess, scoreAwardSuccessIndex, scoreAwardCount, true, true);
+				updateOutputValue(outputMessagesError, scoreAwardErrorIndex, scoreAwardCount, true, false);
 			}
 		}
+	}
+
+	function updateOutputValue (outputElement, index, count, scores, sucess) {
+		outputElement.value = `${scores ? 'POINTS' : 'JOURNAL'} ${sucess ? 'OK' : 'ERROR'}: ${index} of ${count}`;
 	}
 
 	function createMenu (sidebarNode, login) {
@@ -201,7 +242,24 @@
 		sidebarNode.appendChild(input);
 
 		var login = loginNode.firstChild.textContent.trim();
-		return createMenu(sidebarNode, login);
+		
+		var menu = createMenu(sidebarNode, login);
+
+		outputJournalSuccess = addOutputElement(sidebarNode);
+		outputJournalError = addOutputElement(sidebarNode);
+		outputMessagesSuccess = addOutputElement(sidebarNode);
+		outputMessagesError = addOutputElement(sidebarNode);
+
+		return outputMessagesError;
+	}
+
+	function addOutputElement(sidebarNode) {
+		let outputElement = document.createElement("INPUT");
+		outputElement.setAttribute("type", "text");
+		outputElement.setAttribute("disabled", true);
+		outputElement.style.width = '100%';
+		outputElement.style['margin-bottom'] = '9px';
+		return sidebarNode.appendChild(outputElement);
 	}
 
 	var observer = window.setInterval(function () {
