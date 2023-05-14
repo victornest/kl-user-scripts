@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          MigomanAwardHelper.user
 // @namespace     klavogonki
-// @version       0.0.2
+// @version       0.0.3
 // @description   рассылает призовые очки и картинки
 // @include       http://klavogonki.ru/u/*
 // @author        vnest
@@ -15,6 +15,9 @@
 	var outputJournalError;
 	var outputMessagesSuccess;
 	var outputMessagesError;
+
+	var outputForumErrorScoreSend;
+	var outputForumErrorJournalSend;
 
 	var scoreAwardCount;
 	var journalAwardCount;
@@ -157,9 +160,13 @@
 
 		var scoreAwardErrorIndex = 0;
 		var journalAwardErrorIndex = 0;
+		var errorSendScoreUsers = [];
+		var errorSendJournalUsers = [];
+
 
 		for (let userRewardsInfo of userRewardsParsed) {
 			let userId = userRewardsInfo.userId;
+			let userName = userRewardsInfo.userName;
 			let userRewards = userRewardsInfo.rewards;
 			for (let userReward of userRewards) {
 				let amount = userReward.amount;
@@ -171,6 +178,9 @@
 						scoreAwardSuccessIndex++;
 					} else {
 						scoreAwardErrorIndex++;
+						if (errorSendScoreUsers.indexOf(userName) == -1) {
+							errorSendScoreUsers.push(userName);
+						}
 					}
 				}
 				if(sendJournalMessages && journalMessage) {
@@ -178,6 +188,9 @@
 						journalAwardSucessIndex++;
 					} else {
 						journalAwardErrorIndex++;
+						if (errorSendJournalUsers.indexOf(userName) == -1) {
+							errorSendJournalUsers.push(userName);
+						}
 					}
 				}
 
@@ -186,6 +199,14 @@
 				updateOutputValue(outputMessagesSuccess, scoreAwardSuccessIndex, scoreAwardCount, true, true);
 				updateOutputValue(outputMessagesError, scoreAwardErrorIndex, scoreAwardCount, true, false);
 			}
+		}
+
+		if(errorSendJournalUsers.length > 0) {
+			outputForumErrorJournalSend.value = `Награды в журнал не отправляются: ${errorSendJournalUsers.join(', ')}`;
+		}
+
+		if(errorSendScoreUsers.length > 0) {
+			outputForumErrorScoreSend.value = `Очки не отправляются: ${errorSendScoreUsers.join(', ')}`;
 		}
 	}
 
@@ -245,18 +266,22 @@
 		
 		var menu = createMenu(sidebarNode, login);
 
-		outputJournalSuccess = addOutputElement(sidebarNode);
-		outputJournalError = addOutputElement(sidebarNode);
-		outputMessagesSuccess = addOutputElement(sidebarNode);
-		outputMessagesError = addOutputElement(sidebarNode);
+		outputJournalSuccess = addOutputElement(sidebarNode, true);
+		outputJournalError = addOutputElement(sidebarNode, true);
+		outputMessagesSuccess = addOutputElement(sidebarNode, true);
+		outputMessagesError = addOutputElement(sidebarNode, true);
+		outputForumErrorJournalSend = addOutputElement(sidebarNode, false);
+		outputForumErrorScoreSend = addOutputElement(sidebarNode, false);
 
 		return outputMessagesError;
 	}
 
-	function addOutputElement(sidebarNode) {
+	function addOutputElement(sidebarNode, disabled) {
 		let outputElement = document.createElement("INPUT");
 		outputElement.setAttribute("type", "text");
-		outputElement.setAttribute("disabled", true);
+		if(disabled) {
+			outputElement.setAttribute("disabled", disabled);
+		}
 		outputElement.style.width = '100%';
 		outputElement.style['margin-bottom'] = '9px';
 		return sidebarNode.appendChild(outputElement);
