@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          MigomanAwardHelper.user
 // @namespace     klavogonki
-// @version       0.0.3
+// @version       0.0.4
 // @description   рассылает призовые очки и картинки
 // @include       http://klavogonki.ru/u/*
 // @author        vnest
@@ -10,6 +10,7 @@
 (async function () {
     'use strict';
 
+	var menuItems = [];
 	var input;
 	var outputJournalSuccess;
 	var outputJournalError;
@@ -68,35 +69,6 @@
         return new Promise((resolve) => setTimeout(resolve, milliseconds))
     }
 
-    function httpGet(url, retriesLeft) {
-        if(retriesLeft == undefined) {
-            retriesLeft = retryCount;
-        }
-        return new Promise((resolve, reject) => {
-            let xhr = new XMLHttpRequest();
-            xhr.open("Get", url);
-            xhr.onload = () => {
-                if(xhr.status == 200) {
-                    return resolve(JSON.parse(xhr.responseText));
-                } else if (xhr.status == 429) {
-                    logDebug('RETRIES LEFT ' + retriesLeft, xhr);
-                    if(retriesLeft > 0) {
-                        retriesLeft--;
-                        sleep(retryTimeout).then(() => {
-                            return resolve(httpGet(url, retriesLeft));
-                        });
-                    } else {
-                        return reject(logError(xhr.status + '; ' + xhr.responseText));
-                    }
-                }
-            };
-            xhr.onerror = () => {
-                return reject(logError(xhr.statusText));
-            };
-            xhr.send();
-        });
-    }
-
 	function httpPost(url, requestData) {
         return new Promise((resolve, reject) => {
             let xhr = new XMLHttpRequest();
@@ -147,6 +119,11 @@
     }
 
 	async function ProcessAwardsAsync(sendPoints, sendJournalMessages)  {
+		for (let menuItem of menuItems) {
+			menuItem.style['pointer-events'] = 'none';
+			menuItem.style['color'] = 'lightgrey';
+		}
+		
 		var userRewardsParsed = JSON.parse(input.value);
 		var allRewards = userRewardsParsed.map(urp => urp.rewards).reduce((a, b) => a.concat(b));
 		var scoreRewards = allRewards.filter(r => r.privateMessage);
@@ -182,6 +159,9 @@
 							errorSendScoreUsers.push(userName);
 						}
 					}
+					updateOutputValue(outputMessagesSuccess, scoreAwardSuccessIndex, scoreAwardCount, true, true);
+					updateOutputValue(outputMessagesError, scoreAwardErrorIndex, scoreAwardCount, true, false);
+					await sleep(100);
 				}
 				if(sendJournalMessages && journalMessage) {
 					if (await sendJournalMessageAsync(userId, journalMessage)) {
@@ -192,12 +172,10 @@
 							errorSendJournalUsers.push(userName);
 						}
 					}
+					updateOutputValue(outputJournalSuccess, journalAwardSucessIndex, journalAwardCount, false, true);
+					updateOutputValue(outputJournalError, journalAwardErrorIndex, journalAwardCount, false, false);
+					await sleep(500);
 				}
-
-				updateOutputValue(outputJournalSuccess, journalAwardSucessIndex, journalAwardCount, false, true);
-				updateOutputValue(outputJournalError, journalAwardErrorIndex, journalAwardCount, false, false);
-				updateOutputValue(outputMessagesSuccess, scoreAwardSuccessIndex, scoreAwardCount, true, true);
-				updateOutputValue(outputMessagesError, scoreAwardErrorIndex, scoreAwardCount, true, false);
 			}
 		}
 
@@ -207,6 +185,11 @@
 
 		if(errorSendScoreUsers.length > 0) {
 			outputForumErrorScoreSend.value = `Очки не отправляются: ${errorSendScoreUsers.join(', ')}`;
+		}
+
+		for (let menuItem of menuItems) {
+			menuItem.style['pointer-events'] = 'unset';
+			menuItem.style['color'] = 'unset';
 		}
 	}
 
@@ -238,6 +221,7 @@
 		  a.addEventListener('click', item.action);
 		//   a.href = item.url;
 		  a.textContent = item.text;
+		  menuItems.push(a);
 		  li.appendChild(a);
 		  menu.appendChild(li);
 		});
