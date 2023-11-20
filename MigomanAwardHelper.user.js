@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          MigomanAwardHelper.user
 // @namespace     klavogonki
-// @version       0.0.4
+// @version       0.0.5
 // @description   рассылает призовые очки и картинки
 // @include       http://klavogonki.ru/u/*
 // @author        vnest
@@ -150,7 +150,7 @@
 				let privateMessage = userReward.privateMessage;
 				let journalMessage = userReward.journalMessage;
 
-				if(sendPoints) {
+				if(sendPoints && privateMessage) {
 					if (await sendPointsAsync(userId, amount, privateMessage)) {
 						scoreAwardSuccessIndex++;
 					} else {
